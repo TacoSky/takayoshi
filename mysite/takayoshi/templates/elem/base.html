@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
+
+    <head>
+        {# Load header #}
+        {% include "elem/header.html" %}
+    </head>
+
+    <body>
+
+        <div id="area-back">
+            <div id="area-logo">
+                {# Load logo #}
+                {% include "elem/area-logo.html" %}
+            </div>
+
+            <div id="area-menu">
+                {# Load logo #}
+                {% include "elem/area-menu.html" %}
+            </div>
+
+            <div id="area-wind">
+                {# Load logo #}
+                {% include "elem/area-wind.html" %}
+            </div>
+
+            <div id="area-main">
+                {# Load logo #}
+                {% include "elem/area-main.html" %}
+            </div>
+
+        </div>
+    </body>
+</html>
