@@ -68,17 +68,15 @@ html, body{
     position: relative;
     width :100%;
     height:100%;
-    background-color:#eeffff;
     z-index: 0;
 }
 #area-logo {
     position: absolute;
-    background-color:#000000;
+    background-color:#aaaaaa;
     z-index: 2;
 }
 #area-menu {
     position: absolute;
-    background-color:#AAAAAA;
     z-index: 1;
 }
 #area-wind {
@@ -101,7 +99,7 @@ html, body{
     #area-logo {
         top: 6.25%;
         left:6.25%;
-        width:18.75%;
+        width:12.5%;
         height:18.75%;
     }
     #area-menu {
@@ -117,10 +115,10 @@ html, body{
         height:62.5%;
     }
     #area-main {
-        top: 31.25%;
+        top: 18.75%;
         left:25%;
         width:62.5%;
-        height:62.5%;
+        height:75%;
     }
 }
 
@@ -152,8 +150,24 @@ html, body{
 }
 
 
-
-
+/* Color / pattern / style
+ */
+/*
+.style-tdot{
+    background:
+        radial-gradient(#dcf3ff 5%, transparent 10%) 0 0,
+        radial-gradient(#dcf3ff 5%, transparent 10%) 8px 8px;
+    background-color:#dbe9f0;
+    background-size:16px 16px;
+}
+*/
+.style-tdot{
+    background:
+        radial-gradient(#cee5f3 2%, transparent 10%) 0 0,
+        radial-gradient(#cee5f3 2%, transparent 10%) 8px 8px;
+    background-color:#edf0f2;
+    background-size:16px 16px;
+}
 
 
 
