@@ -3,16 +3,16 @@
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
 
     <head>
-        {# Load header #}
-        {% include "elem/header.html" %}
+        <meta charset="UTF-8">
+        <title>{% block title %}base title{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'css/takayoshi.css' %}" rel="stylesheet">
+        <script type='text/javascript'  src="{% static 'js/takayoshi.js' %}"></script>
     </head>
 
     <body>
-
         <div id="area-back" class="style-tdot">
             <div id="area-logo">
-                {# Load logo #}
-                {% include "elem/area-logo.html" %}
             </div>
 
             <div id="area-menu">
@@ -20,14 +20,15 @@
                 {% include "elem/area-menu.html" %}
             </div>
 
-            <div id="area-wind">
-                {# Load logo #}
-                {% include "elem/area-wind.html" %}
+            <div id="area-wind" class="shadow-1">
             </div>
 
-            <div id="area-main">
-                {# Load logo #}
-                {% include "elem/area-main.html" %}
+            <div id="area-main" class="shadow-2">
+                <div id="main-bar-u" class="grad-HB"></div>
+                <div id="main-box-c" class="style-tdot">
+                    {% block maincontent %}{% endblock %}
+                </div>
+                <div id="main-bar-d" class="grad-HB"></div>
             </div>
 
         </div>
