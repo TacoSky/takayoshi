@@ -81,12 +81,11 @@ html, body{
 }
 #area-wind {
     position: absolute;
-    background-color:#000000;
+    background-color:#aaaaaa;
     z-index: 1;
 }
 #area-main {
     position: absolute;
-    background-color:#888888;
     z-index: 2;
 }
 
@@ -149,18 +148,25 @@ html, body{
     }
 }
 
+/* Design of main div
+ */
+#main-bar-u{
+    width:100%;
+    height:1.5%;
+}
+#main-box-c{
+    height:97%;
+    width:97%;
+    margin:0% 1.5%;
+    opacity:0.8;
+}
+#main-bar-d{
+    height:1.5%;
+    width:100%;
+}
 
 /* Color / pattern / style
  */
-/*
-.style-tdot{
-    background:
-        radial-gradient(#dcf3ff 5%, transparent 10%) 0 0,
-        radial-gradient(#dcf3ff 5%, transparent 10%) 8px 8px;
-    background-color:#dbe9f0;
-    background-size:16px 16px;
-}
-*/
 .style-tdot{
     background:
         radial-gradient(#cee5f3 2%, transparent 10%) 0 0,
@@ -168,6 +174,19 @@ html, body{
     background-color:#edf0f2;
     background-size:16px 16px;
 }
-
+.style-grad-HB{ /*>>> Blue*/
+    background: #223a64; /* Old browsers */
+    background: -moz-linear-gradient(left, #223a64 0%, #a8d5ff 70%, #223a64 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); /* IE6-9 */
+}
+.style-grad-VB{ /*VVV Blue*/
+    background: #223a64; /* Old browsers */
+    background: -moz-linear-gradient(top, #223a64 0%, #a8d5ff 70%, #223a64 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=0 ); /* IE6-9 */
+}
 
 
