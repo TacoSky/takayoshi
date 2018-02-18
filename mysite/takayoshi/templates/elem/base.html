@@ -7,9 +7,9 @@
         <title>{% block title %}base title{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
-        <link href="{% static 'css/takayoshi.css' %}" rel="stylesheet">
-        <script type='text/javascript'  src="{% static 'js/takayoshi.js' %}"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">{{ time }}
+        <link href="{% static 'css/takayoshi.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
+        <script type='text/javascript'  src="{% static 'js/takayoshi.js' %}?d={% now "ymdHis" %}"></script>
 
     </head>
 
