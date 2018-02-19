@@ -126,6 +126,9 @@ html, body{
     #menu-logo {
         margin-bottom:8vh;
     }
+    #menu-base{
+        display:none;
+    }
 }
 @media all and (orientation: portrait) {
     #area-menu {
@@ -146,40 +149,68 @@ html, body{
     }
     #manu-view{
         position: fixed;
+        left:-0.5vw;
+        top:9.75vh;
+        width:6.25vw;
+        height:6.25vw;
+/*
         left:1.5vw;
         top:6.25vh;
         width: 6.0vw;
         height: 6.0vw;
+        */
+        opacity:0.7;
         z-index: 4;
         -webkit-transition: -webkit-transform .4s;
         transition: transform  .4s;
     }
     #menu-base {
         position: fixed;
-        top:6.25%;
-        left:-86%;
-        width: 87.5%;
-        height: 87.5%;
+        left:	-86.75vw;
+        top:	6.25vh;
+        width:	87.5vw;
+        height:	87.5vh;
+
         z-index: 4;
         -webkit-transition: -webkit-transform .4s;
         transition: transform  .4s;
     }
-
     #menu-logo {
         position: fixed;
-        top:12.5%;
-        left:-68%;
-        width: 50%;
+        left:-60.5vw;
+        top:13vh;
+        width:18.75vh;
+        hegith:auto;
+
         z-index: 5;
         -webkit-transition: -webkit-transform .5s;
         transition: transform  .5s;
     }
+    #menu-bar-u{
+        width:100%;
+        height:1.5%;
+    }
+    #menu-box-c{
+        height:97%;
+        width:97%;
+        margin:0% 1.5%;
+        opacity:0.7;
+        position: relative;
+    }
+    #menu-bar-d{
+        width:100%;
+        height:1.5%;
+    }
+
     #menu-link{
         position: fixed;
-        top:37.5%;
-        left:-68%;
-        width: 50%;
-        height: 75%;
+
+        top:37.5vh;
+        height:50vh;
+
+        left:-67vw;
+        width:50vw;
+
         z-index: 5;
         -webkit-transition: -webkit-transform .8s;
         transition: transform  .8s;
@@ -303,54 +334,106 @@ p{
 }
 /* Keyflame
  */
-@keyframes key-menuhover {
-    0% {
-        transform: translateY(0px);
-        font-size:1.8vw;
+@media all and (max-width:384px){
+
+    @keyframes key-menuhover {
+        0% {
+            transform: translateY(0px);
+            font-size:4vw;
+        }
+        100% {
+            transform: translateY(-0.2vw);
+            font-size:4.2vw;
+        }
     }
-    100% {
-        transform: translateY(-0.2vw);
-        font-size:1.9vw;
+
+    @-webkit-keyframes key-menuhover {
+        0% {
+            -webkit-transform: translateY(0px);;
+            font-size:4w;
+        }
+        100% {
+            -webkit-transform: translateY(-0.2vw);
+            font-size:4.2vw;
+        }
     }
 }
+@media all and (min-width: 385px) and (max-width:768px) and (orientation: landscape){
 
-@-webkit-keyframes key-menuhover {
-    0% {
-        -webkit-transform: translateY(0px);;
-        font-size:1.8vw;
+    @keyframes key-menuhover {
+        0% {
+            transform: translateY(0px);
+            font-size:2.8vw;
+        }
+        100% {
+            transform: translateY(-0.2vw);
+            font-size:3vw;
+        }
     }
-    100% {
-        -webkit-transform: translateY(-0.2vw);
-        font-size:1.9vw;
+
+    @-webkit-keyframes key-menuhover {
+        0% {
+            -webkit-transform: translateY(0px);;
+            font-size:2.8vw;
+        }
+        100% {
+            -webkit-transform: translateY(-0.2vw);
+            font-size:3vw;
+        }
+    }
+}
+@media all and (min-width: 385px) and (max-width:768px) and (orientation: portrait) {
+
+    @keyframes key-menuhover {
+        0% {
+            transform: translateY(0px);
+            font-size:5vw;
+        }
+        100% {
+            transform: translateY(-0.2vw);
+            font-size:5.1vw;
+        }
+    }
+    @-webkit-keyframes key-menuhover {
+        0% {
+            -webkit-transform: translateY(0px);;
+            font-size:5vw;
+        }
+        100% {
+            -webkit-transform: translateY(-0.2vw);
+            font-size:5.1vw;
+        }
+    }
+}
+@media all and (min-width: 769px) {
+
+    @keyframes key-menuhover {
+        0% {
+            transform: translateY(0px);
+            font-size:1.8vw;
+        }
+        100% {
+            transform: translateY(-0.2vw);
+            font-size:1.9vw;
+        }
+    }
+
+    @-webkit-keyframes key-menuhover {
+        0% {
+            -webkit-transform: translateY(0px);;
+            font-size:1.8vw;
+        }
+        100% {
+            -webkit-transform: translateY(-0.2vw);
+            font-size:1.9vw;
+        }
     }
 }
 
 /* FontSize
  */
 
-@media all and (orientation: landscape) {
-    p{
-        font-size:1.6vw;
-        margin-right: -0.23vw;
-        letter-spacing: 0.23vw;
-        line-height: 2.6vw;
-        text-indent: 1.6vw;
-    }
-    .menu-a{
-        font-size:1.8vw;
-        margin-right: -0.3vw;
-        letter-spacing: 0.3vw;
-        line-height: 2vw;
-
-        margin-left: 0.8vw;
-        text-indent: -0.8vw;
-    }
-    .manu-li{
-        margin-bottom: 2.3vw;
-    }
-}
-
-@media all and (orientation: portrait) {
+@media all and (max-width:384px){
     p{
         font-size:5vw;
         margin-right: -0.8vw;
@@ -370,6 +453,73 @@ p{
     .manu-li{
         margin-bottom: 6vw;
     }
+}
+@media all and (min-width: 385px) and (max-width:768px) and (orientation: landscape){
+
+    p{
+        font-size:3vw;
+        margin-right: -0.5vw;
+        letter-spacing: 0.5vw;
+        line-height: 4vw;
+        text-indent: 3vw;
+    }
+    .menu-a{
+        font-size:2.8vw;
+        margin-right: -0.5vw;
+        letter-spacing: 0.5vw;
+        line-height: 2.9vw;
+
+        margin-left: 1.5vw;
+        text-indent: -1.5vw;
+    }
+    .manu-li{
+        margin-bottom: 4vw;
+    }
+}
+
+@media all and (min-width: 385px) and (max-width:768px) and (orientation: portrait) {
+    p{
+        font-size:5vw;
+        margin-right: -0.8vw;
+        letter-spacing: 0.8vw;
+        line-height: 6.8vw;
+        text-indent: 5vw;
+    }
+    .menu-a{
+        font-size:5vw;
+        margin-right: -0.6vw;
+        letter-spacing: 0.6vw;
+        line-height: 5.5vw;
+
+        margin-left: 3vw;
+        text-indent: -3vw;
+    }
+    .manu-li{
+        margin-bottom: 4vw;
+    }
+}
+
+@media all and (min-width: 769px) {
+    p{
+        font-size:1.6vw;
+        margin-right: -0.23vw;
+        letter-spacing: 0.23vw;
+        line-height: 2.6vw;
+        text-indent: 1.6vw;
+    }
+    .menu-a{
+        font-size:1.8vw;
+        margin-right: -0.3vw;
+        letter-spacing: 0.3vw;
+        line-height: 2vw;
+
+        margin-left: 0.8vw;
+        text-indent: -0.8vw;
+    }
+    .manu-li{
+        margin-bottom: 2.3vw;
+    }
+
 }
 /* Setting about each area size and point
  * ( width > height ) = landscape site
