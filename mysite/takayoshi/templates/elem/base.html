@@ -15,12 +15,21 @@
 
     <body>
         <div id="area-back" class="style-tdot">
-            <div id="area-logo">
-            </div>
-
             <div id="area-menu">
-                {# Load logo #}
-                {% include "elem/area-menu.html" %}
+                <input type="checkbox" id="menu-tgl">
+                <label for="menu-tgl" id="menu-hide"></label>
+                <label for="menu-tgl" id="manu-view" class="drawing style-tdot shadow-3">≡</label>
+                <div id="menu-base" class="drawing style-tdot shadow-3"></div>
+                <div id="menu-logo" class="drawing">
+                    <img src="https://s3.amazonaws.com/takayoshi.images/logo.png" id="menu-logo-img">
+                </div>
+                <ul id="menu-link" class="drawing">
+                    <li class="manu-li"><a href="/" class="menu-a">Summary statement</a></li>
+                    <li class="manu-li"><a href="/qualities/" class="menu-a">Qualities map</a></li>
+                    <li class="manu-li"><a href="/experiences/" class="menu-a">Work experience</a></li>
+                    <li class="manu-li"><a href="/education/" class="menu-a">Education career</a></li>
+                    <li class="manu-li"><a href="/portfolio/" class="menu-a">Portfolios gallery</a></li>
+                </ul>
             </div>
 
             <div id="area-wind" class="shadow-1">
