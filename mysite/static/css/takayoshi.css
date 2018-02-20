@@ -76,8 +76,9 @@ html, body{
     height:100%;
     z-index: 0;
 }
-#area-menu {
+#area-h1{
     position: absolute;
+    z-index: 3;
 }
 #area-wind {
     position: absolute;
@@ -88,6 +89,9 @@ html, body{
     z-index: 2;
 }
 
+#area-menu {
+    position: absolute;
+}
 /* Design of logo div
  */
 /* Design of menu div
@@ -152,7 +156,7 @@ html, body{
     }
     #manu-view{
         position: absolute;
-        left:-0.5vw;
+        left:-1vw;
         top:12vh;
         width:6.5vw;
         height:6.5vw;
@@ -175,7 +179,7 @@ html, body{
     }
     .menu-btnbar{
         position: fixed;
-        left:-0.2vw;
+        left:-0.7vw;
         width:6vw;
         height:0.3vh;
         z-index: 6;
@@ -197,7 +201,7 @@ html, body{
 
     #menu-base {
         position: absolute;
-        left:	-86.75vw;
+        left:	-87.25vw;
         top:	6.25vh;
         width:	87.5vw;
         height:	87.5vh;
@@ -208,10 +212,10 @@ html, body{
     }
     #menu-logo {
         position: absolute;
-        left:-60.5vw;
+        left:-62.8vw;
         top:13vh;
         width:18.75vh;
-        hegith:auto;
+        height:auto;
 
         z-index: 5;
         -webkit-transition: -webkit-transform .5s;
@@ -241,7 +245,7 @@ html, body{
         top:37.5vh;
         height:50vh;
 
-        left:-67vw;
+        left:-66.5vw;
         width:50vw;
 
         z-index: 5;
@@ -249,9 +253,9 @@ html, body{
         transition: transform  .8s;
     }
     #menu-tgl:checked ~ .drawing {
-        -webkit-transform: translateX(93vw);
-        -ms-transform: translateX(93vw);
-        transform: translateX(93vw);
+        -webkit-transform: translateX(93.5vw);
+        -ms-transform: translateX(93.5vw);
+        transform: translateX(93.5vw);
     }
 
     #menu-tgl:checked ~ #menu-hide {
@@ -259,15 +263,15 @@ html, body{
         background-color: rgba(0, 0, 0, .75);
     }
     #menu-tgl:checked ~ #menu-view-btn1 {
-        -webkit-transform:  translateX(93vw) translateY(1.4vw) rotate(-45deg);
-        transform: translateX(93vw) translateY(1.4vw) rotate(-45deg) ;
+        -webkit-transform:  translateX(93.5vw) translateY(1.4vw) rotate(-45deg);
+        transform: translateX(93.5vw) translateY(1.4vw) rotate(-45deg) ;
     }
     #menu-tgl:checked ~ #menu-view-btn2 {
         opacity: 0;
     }
     #menu-tgl:checked ~ #menu-view-btn3 {
-        -webkit-transform:  translateX(93vw) translateY(-1.4vw) rotate(45deg);
-        transform:  translateX(93vw) translateY(-1.4vw) rotate(45deg);
+        -webkit-transform:  translateX(93.5vw) translateY(-1.4vw) rotate(45deg);
+        transform:  translateX(93.5vw) translateY(-1.4vw) rotate(45deg);
     }
 }
 
@@ -290,7 +294,8 @@ html, body{
     top:1.7%;
     left:1.7%;
     width:96.6%;
-    height:96.6%;
+    height:86.6%;
+    padding-top:10%;
 
     overflow:scroll;
     overflow-x: hidden;
@@ -347,6 +352,32 @@ p{
     font-feature-settings : "palt";
 
 }
+h1{
+/*
+    position:absolute;
+    top:0;
+    left:0;*/
+    font-family: 'Balthazar', serif;
+    font-feature-settings : "palt";
+
+    font-weight: bold;
+
+    color:#ffb16d;
+    text-shadow:
+        -0.4vw -0.4vw 0 #223a64,
+        0.4vw 0.4vw 0 #223a64,
+        -0.4vw 0.4vw 0 #223a64,
+        -0.5vw 0.5vw 0.5vw #a8d5ff,
+        -0.6vw 0.6vw 0.5vw #a8d5ff,
+        -0.7vw 0.7vw 0.5vw #a8d5ff,
+        -0.8vw 0.8vw 0.5vw #a8d5ff;
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+    -moz-transform: scaleY(0.7);
+    margin:0;
+    text-align: left;
+}
+
 /* Color / pattern / style
  */
 .style-tdot{
@@ -365,9 +396,9 @@ p{
 }
 .grad-VB{ /*VVV Blue*/
     background: #223a64; /* Old browsers */
-    background: -moz-linear-gradient(top, #223a64 0%, #a8d5ff 70%, #223a64 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top, #223a64 0%, #a8d5ff 30%, #223a64 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #223a64 0%,#a8d5ff 30%,#223a64 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #223a64 0%,#a8d5ff 30%,#223a64 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=0 ); /* IE6-9 */
 }
 
@@ -380,9 +411,9 @@ p{
 }
 .grad-VO{ /*VVV Blue*/
     background: #cb5f00; /* Old browsers */
-    background: -moz-linear-gradient(top, #cb5f00 0%, #ffb16d 70%, #cb5f00 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #cb5f00 0%,#ffb16d 70%,#cb5f00 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #cb5f00 0%,#ffb16d 70%,#cb5f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top, #cb5f00 0%, #ffb16d 30%, #cb5f00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cb5f00 0%,#ffb16d 30%,#cb5f00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cb5f00 0%,#ffb16d 30%,#cb5f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=0 ); /* IE6-9 */
 }
 .shadow-1{
@@ -515,6 +546,12 @@ p{
     .manu-li{
         margin-bottom: 4vw;
     }
+    h1{
+        font-size:10vw;
+        line-height: 9vw;
+        letter-spacing: 0.6vw;
+    }
+
 }
 @media all and (min-width: 385px) and (max-width:768px) and (orientation: landscape){
 
@@ -536,6 +573,11 @@ p{
     }
     .manu-li{
         margin-bottom: 4vw;
+    }
+    h1{
+        font-size:6vw;
+        line-height: 5.5vw;
+        letter-spacing: 0.4vw;
     }
 }
 
@@ -559,6 +601,11 @@ p{
     .manu-li{
         margin-bottom: 2.6vw;
     }
+    h1{
+        font-size:10vw;
+        line-height: 9vw;
+        letter-spacing: 0.6vw;
+    }
 }
 
 @media all and (min-width: 769px) {
@@ -581,7 +628,11 @@ p{
     .manu-li{
         margin-bottom: 2.3vw;
     }
-
+    h1{
+        font-size:6vw;
+        line-height: 5.5vw;
+        letter-spacing: 0.4vw;
+    }
 }
 /* Setting about each area size and point
  * ( width > height ) = landscape site
@@ -599,12 +650,19 @@ p{
         height:62.5%;
         width:62.5%;
     }
+    #area-h1 {
+        top:12.5%;
+        left:31.25%;
+        height:12.5%;
+        width:40%;
+    }
     #area-main {
         top: 18.75%;
         left:25%;
         height:75%;
         width:62.5%;
     }
+
     #area-menu {
         top: 6.25%;
         left:6.25%;
@@ -620,6 +678,12 @@ p{
         left:31.25%;
         height:12.5%;
         width:37.5%;
+    }
+    #area-h1 {
+        top:12.5%;
+        left:18.75%;
+        height:12.5%;
+        width:50%;
     }
     #area-wind {
         top: 12.5%;
