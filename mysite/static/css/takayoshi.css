@@ -181,7 +181,7 @@ html, body{
         position: fixed;
         left:-0.7vw;
         width:6vw;
-        height:0.3vh;
+        height:0.25vh;
         z-index: 6;
         background-color:#1a202a;
         pointer-events: none;
@@ -190,13 +190,13 @@ html, body{
         border-radius: 1px;
     }
     #menu-view-btn1{
-        top:12.9vh;
+        top:12.8vh;
     }
     #menu-view-btn2{
-        top:13.7vh;
+        top:13.5vh;
     }
     #menu-view-btn3{
-         top:14.5vh;
+         top:14.00vh;
     }
 
     #menu-base {
@@ -263,15 +263,15 @@ html, body{
         background-color: rgba(0, 0, 0, .75);
     }
     #menu-tgl:checked ~ #menu-view-btn1 {
-        -webkit-transform:  translateX(93.5vw) translateY(1.4vw) rotate(-45deg);
-        transform: translateX(93.5vw) translateY(1.4vw) rotate(-45deg) ;
+        -webkit-transform:  translateX(93.5vw) translateY(0.6vh) rotate(-45deg);
+        transform: translateX(93.5vw) translateY(0.6vh) rotate(-45deg) ;
     }
     #menu-tgl:checked ~ #menu-view-btn2 {
         opacity: 0;
     }
     #menu-tgl:checked ~ #menu-view-btn3 {
-        -webkit-transform:  translateX(93.5vw) translateY(-1.4vw) rotate(45deg);
-        transform:  translateX(93.5vw) translateY(-1.4vw) rotate(45deg);
+        -webkit-transform:  translateX(93.5vw) translateY(-0.vh) rotate(45deg);
+        transform:  translateX(93.5vw) translateY(-0.6vh) rotate(45deg);
     }
 }
 
@@ -363,10 +363,10 @@ h1{
         -0.4vw -0.4vw 0 #223a64,
         0.4vw 0.4vw 0 #223a64,
         -0.4vw 0.4vw 0 #223a64,
-        -0.5vw 0.5vw 0.5vw #a8d5ff,
-        -0.6vw 0.6vw 0.5vw #a8d5ff,
-        -0.7vw 0.7vw 0.5vw #a8d5ff,
-        -0.8vw 0.8vw 0.5vw #a8d5ff;
+        -0.5vw 0.5vw 0 #a8d5ff,
+        -0.6vw 0.6vw 0 #a8d5ff,
+        -0.7vw 0.7vw 0 #a8d5ff,
+        -0.8vw 0.8vw 0 #a8d5ff;
     transform: scaleY(0.7);
     -webkit-transform: scaleY(0.7);
     -moz-transform: scaleY(0.7);
