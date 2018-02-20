@@ -133,7 +133,10 @@ html, body{
 @media all and (orientation: portrait) {
     #area-menu {
         position: relative;
-        background: #666666;
+        top:0%;
+        left:0%;
+        width: 100%;
+        height: 100%;
     }
 
     #menu-hide{
@@ -170,12 +173,11 @@ html, body{
         z-index: 6;
         margin:0px;
     }
-
     .menu-btnbar{
         position: fixed;
         left:-0.2vw;
-        width:4.5vw;
-        height:0.4vw;
+        width:6vw;
+        height:0.3vh;
         z-index: 6;
         background-color:#1a202a;
         pointer-events: none;
@@ -184,13 +186,13 @@ html, body{
         border-radius: 1px;
     }
     #menu-view-btn1{
-        top:12.8vh;
+        top:12.9vh;
     }
     #menu-view-btn2{
-        top:13.4vh;
+        top:13.7vh;
     }
     #menu-view-btn3{
-        top:14vh;
+         top:14.5vh;
     }
 
     #menu-base {
