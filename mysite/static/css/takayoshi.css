@@ -137,7 +137,7 @@ html, body{
     }
 
     #menu-hide{
-        position: fixed;
+        position: absolute;
         top:0%;
         left:0%;
         width: 100%;
@@ -148,7 +148,7 @@ html, body{
         transition: background-color .8s;
     }
     #manu-view{
-        position: fixed;
+        position: absolute;
         left:-0.5vw;
         top:12vh;
         width:6.5vw;
@@ -194,7 +194,7 @@ html, body{
     }
 
     #menu-base {
-        position: fixed;
+        position: absolute;
         left:	-86.75vw;
         top:	6.25vh;
         width:	87.5vw;
@@ -205,7 +205,7 @@ html, body{
         transition: transform  .4s;
     }
     #menu-logo {
-        position: fixed;
+        position: absolute;
         left:-60.5vw;
         top:13vh;
         width:18.75vh;
