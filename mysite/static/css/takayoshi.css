@@ -586,49 +586,49 @@ p{
  */
 @media all and (orientation: landscape) {
     #area-logo {
-        left:6.25vw;
-        width:12.5vw;
-        height:18.75vh;
+        left:6.25%;
+        width:12.5%;
+        height:18.75%;
     }
     #area-wind {
-        top: 6.25vh;
-        left:31.25vw;
-        height:62.5vh;
-        width:62.5vw;
+        top: 6.25%;
+        left:31.25%;
+        height:62.5%;
+        width:62.5%;
     }
     #area-main {
-        top: 18.75vh;
-        left:25vw;
-        height:75vh;
-        width:62.5vw;
+        top: 18.75%;
+        left:25%;
+        height:75%;
+        width:62.5%;
     }
     #area-menu {
-        top: 6.25vh;
-        left:6.25vw;
-        height:87.5vh;
-        width:12.5vw;
+        top: 6.25%;
+        left:6.25%;
+        height:87.5%;
+        width:12.5%;
         z-index: 1;
     }
 }
 
 @media all and (orientation: portrait) {
     #area-logo {
-        top: 0vh;
-        left:31.25vw;
-        height:12.5vh;
-        width:37.5vw;
+        top: 0%;
+        left:31.25%;
+        height:12.5%;
+        width:37.5%;
     }
     #area-wind {
-        top: 12.5vh;
-        left:18vw;
-        height:75vh;
-        width:75vw;
+        top: 12.5%;
+        left:18%;
+        height:75%;
+        width:75%;
     }
     #area-main {
-        top: 18.75vh;
-        left:12.5vw;
-        height:78vh;
-        width:78vw;
+        top: 18.75%;
+        left:12.5%;
+        height:78%;
+        width:78%;
     }
 }
 
