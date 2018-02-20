@@ -137,7 +137,7 @@ html, body{
     }
 
     #menu-hide{
-        position: absolute;
+        position: fixed;
         top:0%;
         left:0%;
         width: 100%;
@@ -636,20 +636,28 @@ p{
 /* Bar
  */
 
+#bar-base{
+    z-index: 1;
+    position: fixed;
+    left:0vw;
+    top:0vh;
+    width:100vw;
+    height:100vh;
+    pointer-events: none;
+}
+#menu-tgl:checked ~ #bar-base{
+    z-index: 4;
+}
 .bar-mw{
     width:9.3vw;
     height:0.2vh;
     position: absolute;
-    z-index: 1;
 }
-#menu-tgl:checked ~ .bar-mw{
-    z-index: 4;
-}
+
 .bar-mh{
     width:0.2vw;
     height:9.3vh;
     position: absolute;
-    z-index: 1;
 }
 #menu-tgl:checked ~ .bar-mh{
     z-index: 4;
