@@ -74,10 +74,6 @@ html, body{
     height:100vh;
     z-index: 0;
 }
-#area-logo {
-    position: absolute;
-    z-index: 2;
-}
 #area-menu {
     position: absolute;
 }
@@ -128,6 +124,9 @@ html, body{
     #menu-base{
         display:none;
     }
+    .menu-btnbar{
+        display: none;
+    }
 }
 @media all and (orientation: portrait) {
     #area-menu {
@@ -153,10 +152,33 @@ html, body{
         width:6.25vw;
         height:6.25vw;
         opacity:0.7;
-        z-index: 4;
+        z-index: 5;
         -webkit-transition: -webkit-transform .4s;
         transition: transform  .4s;
     }
+
+    .menu-btnbar{
+        position: fixed;
+        left:-0.2vw;
+        width:4.5vw;
+        height:0.4vw;
+        z-index: 6;
+        background-color:#1a202a;
+        pointer-events: none;
+        -webkit-transition: all .7s;
+        transition: all  .7s;
+        border-radius: 1px;
+    }
+    #menu-view-btn1{
+        top:12.8vh;
+    }
+    #menu-view-btn2{
+        top:13.4vh;
+    }
+    #menu-view-btn3{
+        top:14vh;
+    }
+
     #menu-base {
         position: fixed;
         left:	-86.75vw;
@@ -164,7 +186,7 @@ html, body{
         width:	87.5vw;
         height:	87.5vh;
 
-        z-index: 4;
+        z-index: 5;
         -webkit-transition: -webkit-transform .4s;
         transition: transform  .4s;
     }
@@ -218,7 +240,18 @@ html, body{
 
     #menu-tgl:checked ~ #menu-hide {
         pointer-events: auto;
-        background-color: rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .75);
+    }
+    #menu-tgl:checked ~ #menu-view-btn1 {
+        -webkit-transform:  translateX(93vw) translateY(1.4vw) rotate(-45deg);
+        transform: translateX(93vw) translateY(1.4vw) rotate(-45deg) ;
+    }
+    #menu-tgl:checked ~ #menu-view-btn2 {
+        opacity: 0;
+    }
+    #menu-tgl:checked ~ #menu-view-btn3 {
+        -webkit-transform:  translateX(93vw) translateY(-1.4vw) rotate(45deg);
+        transform:  translateX(93vw) translateY(-1.4vw) rotate(45deg);
     }
 }
 
@@ -578,13 +611,13 @@ p{
     width:9.3vw;
     height:0.2vh;
     position: absolute;
-    z-index: 0.1;
+    z-index: 4;
 }
 .bar-mh{
     width:0.2vw;
     height:9.3vh;
     position: absolute;
-    z-index: 0.1;
+    z-index: 4;
 }
 #bar-01-ltpw{
     left:0.78vw;
