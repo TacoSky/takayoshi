@@ -371,7 +371,7 @@ h2,h3,p,.main-a{
 h2{
     font-weight: bold;
     position: relative;
-    margin-top:1.5vw;
+    margin-top:2.4vw;
     margin-bottom:0vw;
     color: #223a64;
     text-shadow: -0.1vh 0.2vh 0.1vh rgba(26,32,42,0.5);
@@ -401,6 +401,7 @@ em{
 .menu-a{
     font-family: 'Bellefair', serif;
     color:#1a202a;
+    font-weight: normal;
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
 
@@ -570,13 +571,13 @@ em{
         line-height: 7vw;
 
     }
-    p{
+    p,.main-a{
         font-size: 3.3vw;
         line-height: 4.5vw;
         margin-right: -0.23vw;
         letter-spacing: 0.23vw;
     }
-    p,h2,h3{
+    p,h2,h3,.main-a{
         text-indent: 1.6vw;
     }
     .menu-a{
@@ -612,13 +613,13 @@ em{
         line-height: 3.5vw;
 
     }
-    p{
+    p,.main-a{
         font-size:2.4vw;
         line-height: 3vw;
         margin-right: -0.23vw;
         letter-spacing: 0.23vw;
     }
-    p,h2,h3{
+    p,h2,h3,.main-a{
         text-indent: 1.6vw;
     }
     .menu-a{
@@ -654,13 +655,13 @@ em{
         line-height: 5vw;
 
     }
-    p{
+    p,.main-a{
         font-size:3vw;
         line-height: 3.8vw;
         margin-right: -0.23vw;
         letter-spacing: 0.23vw;
     }
-    p,h2,h3{
+    p,h2,h3,.main-a{
         text-indent: 1.6vw;
     }
     .menu-a{
@@ -695,13 +696,13 @@ em{
         line-height: 3.5vw;
 
     }
-    p{
+    p,.main-a{
         font-size:1.6vw;
         line-height: 2.4vw;
         margin-right: -0.23vw;
         letter-spacing: 0.23vw;
     }
-    p,h2,h3{
+    p,h2,h3,.main-a{
         text-indent: 1.6vw;
     }
 

@@ -8,6 +8,7 @@ admin.site.register(Company)
 admin.site.register(JobeRole)
 admin.site.register(Experience)
 
+
 class CompanyAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
 

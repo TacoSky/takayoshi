@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Company, JobeRole, Experience
 
 # Create your views here.
 
@@ -20,8 +21,14 @@ def education(request):
 
 
 def experiences(request):
+    """get experiences"""
+    data = {
+        'companies': Company.objects.all(),
+        'jobroles': JobeRole.objects.all(),
+        'experiences': Experience.objects.all(),
+    }
     """experiences page"""
-    return render(request,'experiences.html')
+    return render(request,'experiences.html', data)
 
 
 
