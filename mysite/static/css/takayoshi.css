@@ -339,13 +339,6 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.menu-a{
-    font-family: 'Bellefair', serif;
-    color:#1a202a;
-    text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
-    font-feature-settings : "palt";
-
-}
 h1{
     font-family: 'Balthazar', serif;
     font-feature-settings : "palt";
@@ -367,20 +360,21 @@ h1{
     margin:0;
     text-align: left;
 }
-h2,h3,p{
+h2,h3,p,.main-a{
     font-family: 'Roboto Slab', serif;
     color:#1a202a;
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
-    margin-top:0.8vw;
-    margin-bottom:1.2vw;
+    margin-top:0.6vw;
+    margin-bottom:1.4vw;
 }
 h2{
     font-weight: bold;
     position: relative;
+    margin-top:1.5vw;
     margin-bottom:0vw;
     color: #223a64;
-    text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
+    text-shadow: -0.1vh 0.2vh 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
 }
 h2:after{
@@ -396,13 +390,21 @@ h2:after{
     background: linear-gradient(to right, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); /* IE6-9 */
 }
-
 em{
     font-weight: bold;
     color:#cb5f00;
     text-shadow: 0px 0px 0.1vh #ffb16d;
 }
+.main-a{
+    color:#223a64;
+}
+.menu-a{
+    font-family: 'Bellefair', serif;
+    color:#1a202a;
+    text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
+    font-feature-settings : "palt";
 
+}
 /* Color / pattern / style
  */
 .style-tdot{
