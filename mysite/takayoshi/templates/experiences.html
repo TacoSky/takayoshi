@@ -40,8 +40,10 @@
                     </p>
                     {% for experience in experiences %}
                         {% if experience.role == jobrole %}
-                            {{ experience.name }}
-                            {{ experience.description }}
+                            <p>
+                                <em>{{ experience.name }}</em>
+                                {{ experience.description }}
+                            </p>
                         {% endif %}
                     {% endfor %}
                 {%  endif %}
