@@ -19,36 +19,50 @@
 
 {% block maincontent %}
     {% for company in companies %}
-        <h2>{{ company.name }}</h2>
-        <p>
-            {{ company.startdate }} - {{ company.enddate }}
-            {{ company.place }}
-            {% if company.url != "" %}
-                <a href="{{ company.url }}">Web Site</a>
-            {% endif %}
-            {{ company.description }}
-        </p>
-        <p>
-            {% for jobrole in jobroles %}
-                {%  if jobrole.company == company %}
-                    <h3>
-                        {{ jobrole.name }}
-                        {{ jobrole.startdate }} - {{ jobrole.enddate }}
-                    </h3>
-                    <p>
-                        {{ jobrole.description }}
-                    </p>
-                    {% for experience in experiences %}
-                        {% if experience.role == jobrole %}
-                            <p>
-                                <em>{{ experience.name }}</em>
-                                {{ experience.description }}
-                            </p>
-                        {% endif %}
-                    {% endfor %}
-                {%  endif %}
-            {% endfor %}
-        </p>
+        <div class="cmp-box">
+            <h2 class="cmp-h2">{{ company.name }}</h2>
+            <div class="cmp-info">
+                <p>
+                    {{ company.startdate|date:"Y M" }} - {{ company.enddate|date:"Y M" }}
+                    {{ company.place }}
+                    {% if company.url != "" %}
+                        <a href="{{ company.url }}">Web Site</a>
+                    {% endif %}
+                    {{ company.description }}
+                </p>
+            </div>
+            <div class="cmp-box">
+                {% for jobrole in jobroles %}
+                    {%  if jobrole.company == company %}
+                        <div class="role-box">
+                            <input type="checkbox" id="role-tgl-{{ company.name }}{{ jobrole.name }}"  class="role-tgl">
+                            <label for="role-tgl-{{ company.name }}{{ jobrole.name }}" class="role-btn"></label>
+                            <label for="role-tgl-{{ company.name }}{{ jobrole.name }}" class="role-title-lbl">
+                                <h3 class="role-h3">
+                                    {{ jobrole.name }}
+                                </h3>
+                                <p class="role-startend">
+                                    {{ jobrole.startdate|date:"Y M" }} - {{ jobrole.enddate|date:"Y M" }}
+                                </p>
+                                <p class="role-description">
+                                    {{ jobrole.description }}
+                                </p>
+                            </label>
+                            <div class="exp-box">
+                                {% for experience in experiences %}
+                                    {% if experience.role == jobrole %}
+                                        <p>
+                                            <em>{{ experience.name }}</em>
+                                            {{ experience.description }}
+                                        </p>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {%  endif %}
+                {% endfor %}
+            </div>
+        </div>
     {% endfor %}
 
 

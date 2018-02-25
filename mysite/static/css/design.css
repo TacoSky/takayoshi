@@ -269,6 +269,16 @@ html, body{
 }
 
 
+.exp-box {
+    height:0px;
+    overflow:hidden;
+    transition: transform .5s;
+}
+.role-tgl:checked ~ .exp-box {
+    height:100%;
+}
+
+
 /* Setting about each area size and point
  * ( width > height ) = landscape site
  * ( width < height ) = portrait
