@@ -55,16 +55,15 @@ a{
 /*}*/
 /* FontSize
  */
-@media all and (max-width:420px){
-
+@media all and (max-width:400px){
     html {
-        font-size: calc(125% + 6 * (100vw - 400px) / 600);
+        font-size: calc(100% + 4 * (100vw - 100px) / 300);
     }
     p,span,a,em {
         font-size: 1em;
     }
     h1{
-        font-size:2.0em;
+        font-size:1.8em;
     }
     h2{
         font-size: 1.5em;
@@ -72,13 +71,10 @@ a{
     h3,.main-a{
         font-size: 1.2em;
     }
-
-
 }
-@media all and (min-width:421px) and (max-width:1000px){
-
+@media all and (min-width:401px) and (max-width:1000px){
     html {
-        font-size: calc(140% + 5 * (100vw - 1000px) / 1000);
+        font-size: calc(110% + 3 * (100vw - 400px) / 600);
     }
     p,span,a,em {
         font-size: 1em;
@@ -92,21 +88,17 @@ a{
     h3,.main-a{
         font-size: 1.2em;
     }
-
-
-
 }
 
 @media all and (min-width:1001px){
-
     html {
-        font-size: calc(150% + 5 * (100vw - 1000px) / 1000);
+        font-size: calc(120% + 2 * (100vw - 1000px) / 1000);
     }
     p,span,a,em {
         font-size: 1em;
     }
     h1{
-        font-size:4em;
+        font-size:3em;
 
     }
     h2{
@@ -115,8 +107,10 @@ a{
     h3,.main-a{
         font-size: 1.4em;
     }
-
 }
+
+
+
 @keyframes key-menuhover {
     0% {
         transform: translateY(0px);
@@ -140,7 +134,7 @@ a{
 }
 
 
-p,.main-a{
+p{
     line-height: 3em;
 }
 
@@ -156,12 +150,11 @@ p,h2,h3,.main-a{
 .menu-a{
     margin-right: -0.3vw;
     line-height: 2vw;
-
     margin-left: 0.8vw;
     text-indent: -0.8vw;
 }
-.manu-li{
-    margin-bottom: 2.3vw;
+.menu-li{
+    margin-bottom: 1em;
 }
 
 

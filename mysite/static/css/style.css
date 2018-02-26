@@ -37,11 +37,23 @@
     background: linear-gradient(to bottom, #cb5f00 0%,#ffb16d 30%,#cb5f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=0 ); /* IE6-9 */
 }
-.shadow-1{
-    filter: drop-shadow(-2px 3px 1px rgba(27,43,71,0.8));
+
+@media all and (orientation: landscape) {
+    .shadow-1{
+        filter: drop-shadow(-2px 3px 1px rgba(27,43,71,0.8));
+    }
+    .shadow-2{
+        filter: drop-shadow(-3px 4px 2px rgba(27,43,71,0.8));
+    }
 }
-.shadow-2{
-    filter: drop-shadow(-3px 4px 2px rgba(27,43,71,0.8));
+
+@media all and (orientation: portrait) {
+    .shadow-1{
+        /*nothing*/
+    }
+    .shadow-2{
+        /*nothing*/
+    }
 }
 .shadow-3{
     filter: drop-shadow(-4px 6px 3px rgba(27,43,71,0.9));
