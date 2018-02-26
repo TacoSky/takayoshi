@@ -10,7 +10,7 @@ h1{
     font-feature-settings : "palt";
 
     font-weight: bold;
-
+/*
     color:#ffb16d;
     text-shadow:
         -0.4vw -0.4vw 0 #223a64,
@@ -24,7 +24,9 @@ h1{
     -webkit-transform: scaleY(0.7);
     -moz-transform: scaleY(0.7);
     margin:0;
+    */
     text-align: left;
+    display:inline-block;
 }
 h2,h3,p,.main-a{
     font-family: 'Roboto Slab', serif;
@@ -72,18 +74,24 @@ em{
     font-feature-settings : "palt";
 
 }
-
+a{
+    text-decoration: none;
+    display: block;
+}
 
 /* FontSize
  */
 
 @media all and (max-width:384px){
     h1{
+        font-size:13vw;
+
+        /*
         font-size:15vw;
         line-height: 14vw;
         letter-spacing: 0.6vw;
         margin-left: 7vw;
-        text-indent: -7vw;
+        text-indent: -7vw;*/
     }
     h2{
         font-size:6vw;

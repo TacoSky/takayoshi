@@ -1,0 +1,232 @@
+
+/* Design of menu div
+ */
+
+
+#area-menu {
+    z-index: 10;
+}
+
+.menu-a{
+}
+.menu-a:hover{
+    -webkit-animation: key-menuhover 0.2s ease-in-out 0s  forwards;
+    animation: key-menuhover 0.2s ease-in-out 0s  forwards;
+}
+#menu-tgl{
+    display: none;
+}
+#menu-logo {
+    width:100%;
+    overflow:hidden;
+}
+@media all and (orientation: landscape) {
+    #area-menu {
+        position: absolute;
+        top: 6.25%;
+        left:6.25%;
+        height:87.5%;
+        width:12.5%;
+    }
+    #menu-hide{
+        display: none;
+        pointer-events: none;
+    }
+    #menu-view{
+        display: none;
+    }
+
+    #area-logo {
+        left:6.25%;
+        width:12.5%;
+        height:18.75%;
+
+        margin-bottom:8vh;
+    }
+    #menu-logo-img{
+        width:100%;
+    }
+    #menu-base{
+        display:none;
+    }
+    .menu-btnbar{
+        display: none;
+    }
+
+
+}
+
+@media all and (orientation: portrait) {
+    #area-menu {
+        position: relative;
+        top:0%;
+        height:100%;
+        left:0%;
+        width:100%;
+    }
+
+
+    #menu-hide{
+        /* over dark */
+        z-index: 10;
+        position: fixed;
+        top:0%;
+        left:0%;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        /* anime speed*/
+        -webkit-transition: -webkit-background-color .4s;
+        transition: background-color .4s;
+    }
+    #menu-tgl:checked ~ #menu-hide {
+        /* anime */
+        pointer-events: auto;
+        background-color: rgba(0, 0, 0, .75);
+    }
+
+    #menu-base{
+
+        /* anime */
+        opacity: 0;
+        z-index: 11;
+
+        position: absolute;
+        top:6.75%;
+        height:86.5%;
+        left:6.75%;
+        width:86.5%;
+
+        -webkit-transition: -webkit-transform .3s;
+        transition: 0.3s;
+    }
+    #menu-tgl:checked ~ #menu-base {
+        /* anime */
+        opacity: 1;
+    }
+
+
+
+    #menu-logo {
+        /* anime */
+        opacity: 0;
+        z-index: 8;
+
+        position: absolute;
+        top:6.75%;
+        height:24.5%;
+        left:6.75%;
+        width:86.5%;
+
+        -webkit-transition: -webkit-transform 1s;
+        transition: transform  1s;
+
+    }
+    #menu-tgl:checked ~ #menu-logo {
+        /* anime */
+        opacity: 1;
+        z-index: 12;
+    }
+    #menu-logo-img{
+        margin-top:3%;
+        width:30%;
+    }
+
+
+
+    #menu-link{
+        opacity: 0;
+        z-index: 8;
+
+        position: fixed;
+        top:37.5%;
+        height:52.5%;
+
+        left:6.75%;
+        width:86.5%;
+
+        -webkit-transition: -webkit-transform .8s;
+        transition: transform  .8s;
+
+        padding-left: 10%;
+    }
+
+    #menu-tgl:checked ~ #menu-link {
+        /* anime */
+        opacity: 1;
+        z-index: 12;
+    }
+
+
+    #menu-view {
+        z-index: 13;
+        position: absolute;
+        background-color: #f5dd5d;
+
+        left:-1vw;
+        top:12vh;
+        width:6.5vw;
+        height:6.5vw;
+        opacity:0.7;
+        -webkit-transition: -webkit-transform .3s;
+        transition: transform  .3s;
+    }
+    .menu-btnbar{
+    }
+}
+
+
+/*
+
+
+@media all and (orientation: portrait) {
+    .menu-view-bar{
+        width:100%;
+        height:12%;
+        z-index: 6;
+        margin:0px;
+    }
+    #menu-view-c{
+        width:95%;
+        height:76%;
+        z-index: 6;
+        margin:0px;
+    }
+    .menu-btnbar{
+        position: fixed;
+        left:-0.7vw;
+        width:6vw;
+        height:0.25vh;
+        z-index: 6;
+        background-color:#1a202a;
+        pointer-events: none;
+        -webkit-transition: all .7s;
+        transition: all  .7s;
+        border-radius: 1px;
+    }
+    #menu-view-btn1{
+        top:12.8vh;
+    }
+    #menu-view-btn2{
+        top:13.5vh;
+    }
+    #menu-view-btn3{
+         top:14.00vh;
+    }
+
+
+    #menu-tgl:checked ~ #menu-view-btn1 {
+        -webkit-transform:  translateX(93.5vw) translateY(0.6vh) rotate(-45deg);
+        transform: translateX(93.5vw) translateY(0.6vh) rotate(-45deg) ;
+    }
+    #menu-tgl:checked ~ #menu-view-btn2 {
+        opacity: 0;
+    }
+    #menu-tgl:checked ~ #menu-view-btn3 {
+        -webkit-transform:  translateX(93.5vw) translateY(-0.vh) rotate(45deg);
+        transform:  translateX(93.5vw) translateY(-0.6vh) rotate(45deg);
+    }
+}
+
+*/

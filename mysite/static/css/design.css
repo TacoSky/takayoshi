@@ -1,217 +1,98 @@
-/* Base color setting
- */
+
 html, body{
     width :100%;
     height:100%;
 	overflow:hidden;
+    z-index: 0;
 }
 #area-back{
     position: relative;
 	overflow:hidden;
     width :100%;
     height:100%;
-    z-index: 0;
-}
-#area-h1{
-    position: absolute;
-    z-index: 3;
+    z-index: 2;
 }
 #area-wind {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
+    background-color: #1a202a;
 }
 #area-main {
     position: absolute;
-    z-index: 2;
-}
+    z-index: 4;
 
-#area-menu {
+}
+/* zindex 8 -> bar */
+#area-h1{
     position: absolute;
+    z-index: 9;
 }
-/* Design of logo div
+/* Setting about each area size and point
+ * ( width > height ) = landscape site
+ * ( width < height ) = portrait
  */
-/* Design of menu div
- */
-.menu-a{
-    text-decoration: none;
-    display: block;
-}
-.menu-a:hover{
-    -webkit-animation: key-menuhover 0.2s ease-in-out 0s  forwards;
-    animation: key-menuhover 0.2s ease-in-out 0s  forwards;
-}
-#menu-tgl{
-    display: none;
-}
-
-#menu-logo {
-    width:100%;
-    overflow:hidden;
-}
-#menu-logo-img{
-    width:100%;
-}
-
 @media all and (orientation: landscape) {
-    #menu-hide{
-        display: none;
-        pointer-events: none;
+    #area-wind {
+        top: 6.25%;
+        left:31.25%;
+        height:62.5%;
+        width:62.5%;
     }
-    #manu-view {
-        display: none;
+    #area-main {
+        top: 18.75%;
+        left:25%;
+        height:75%;
+        width:62.5%;
     }
-    #menu-logo {
-        margin-bottom:8vh;
-    }
-    #menu-base{
-        display:none;
-    }
-    .menu-btnbar{
-        display: none;
+    #area-h1 {
+        top:12.5%;
+        left:31.25%;
+        height:12.5%;
+        width:40%;
     }
 }
+
 @media all and (orientation: portrait) {
-    #area-menu {
-        position: relative;
+    #area-wind {
+        top:6.75%;
+        height:86.5%;
+        left:6.75%;
+        width:86.5%;
+    }
+    #area-main {
+        top:13.75%;
+        height:78.75%;
+        left:7.5%;
+        width:85.0%;
+    }
+    #area-h1{
         top:0%;
+        height:12.5%;
         left:0%;
-        width: 100%;
-        height: 100%;
-    }
-
-    #menu-hide{
-        position: fixed;
-        top:0%;
-        left:0%;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 4;
-        -webkit-transition: -webkit-background-color .8s;
-        transition: background-color .8s;
-    }
-    #manu-view{
-        position: absolute;
-        left:-1vw;
-        top:12vh;
-        width:6.5vw;
-        height:6.5vw;
-        opacity:0.7;
-        z-index: 5;
-        -webkit-transition: -webkit-transform .3s;
-        transition: transform  .3s;
-    }
-    .menu-view-bar{
         width:100%;
-        height:12%;
-        z-index: 6;
-        margin:0px;
-    }
-    #menu-view-c{
-        width:95%;
-        height:76%;
-        z-index: 6;
-        margin:0px;
-    }
-    .menu-btnbar{
-        position: fixed;
-        left:-0.7vw;
-        width:6vw;
-        height:0.25vh;
-        z-index: 6;
-        background-color:#1a202a;
-        pointer-events: none;
-        -webkit-transition: all .7s;
-        transition: all  .7s;
-        border-radius: 1px;
-    }
-    #menu-view-btn1{
-        top:12.8vh;
-    }
-    #menu-view-btn2{
-        top:13.5vh;
-    }
-    #menu-view-btn3{
-         top:14.00vh;
-    }
-
-    #menu-base {
-        position: absolute;
-        left:	-87.25vw;
-        top:	6.25vh;
-        width:	87.5vw;
-        height:	87.5vh;
-
-        z-index: 5;
-        -webkit-transition: -webkit-transform .4s;
-        transition: transform  .4s;
-    }
-    #menu-logo {
-        position: absolute;
-        left:-62.8vw;
-        top:13vh;
-        width:18.75vh;
-        height:auto;
-
-        z-index: 5;
-        -webkit-transition: -webkit-transform .5s;
-        transition: transform  .5s;
-    }
-    #menu-bar-u{
-        width:100%;
-        height:1.5%;
-        border-radius: 2px;
-    }
-    #menu-box-c{
-        height:97%;
-        width:97%;
-        margin:0% 1.5%;
-        opacity:0.9;
-        position: relative;
-    }
-    #menu-bar-d{
-        width:100%;
-        height:1.5%;
-        border-radius: 2px;
-    }
-
-    #menu-link{
-        position: fixed;
-
-        top:37.5vh;
-        height:50vh;
-
-        left:-66.5vw;
-        width:50vw;
-
-        z-index: 5;
-        -webkit-transition: -webkit-transform .8s;
-        transition: transform  .8s;
-    }
-    #menu-tgl:checked ~ .drawing {
-        -webkit-transform: translateX(93.5vw);
-        -ms-transform: translateX(93.5vw);
-        transform: translateX(93.5vw);
-    }
-
-    #menu-tgl:checked ~ #menu-hide {
-        pointer-events: auto;
-        background-color: rgba(0, 0, 0, .75);
-    }
-    #menu-tgl:checked ~ #menu-view-btn1 {
-        -webkit-transform:  translateX(93.5vw) translateY(0.6vh) rotate(-45deg);
-        transform: translateX(93.5vw) translateY(0.6vh) rotate(-45deg) ;
-    }
-    #menu-tgl:checked ~ #menu-view-btn2 {
-        opacity: 0;
-    }
-    #menu-tgl:checked ~ #menu-view-btn3 {
-        -webkit-transform:  translateX(93.5vw) translateY(-0.vh) rotate(45deg);
-        transform:  translateX(93.5vw) translateY(-0.6vh) rotate(45deg);
     }
 }
 
 
+/* Design of h1 div
+ */
+#h1-base {
+    position:static;
+    width:100%;
+    height:100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+#h1-content {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+   --webkit-align-items: center;
+    position:static;
+    height:auto;
+}
 /* Design of wind div
  */
 #wind-base {
@@ -225,34 +106,68 @@ html, body{
 
 /* Design of main div
  */
+
 #main-base {
     position: absolute;
-    top:1.7%;
-    left:1.7%;
-    width:96.6%;
-    height:78%;
-    padding-top:10%;
-
     overflow:scroll;
     overflow-x: hidden;
 }
-#main-bar-u{
-    width:100%;
-    height:1.5%;
-    border-radius: 2px;
-}
 #main-box-c{
-    height:97%;
-    width:97%;
-    margin:0% 1.5%;
-    opacity:0.7;
+    opacity:0.8;
     position: relative;
 }
-#main-bar-d{
-    height:1.5%;
-    width:100%;
-    border-radius: 2px;
+
+@media all and (orientation: landscape) {
+    #main-base {
+        top:1.7%;
+        left:1.7%;
+        width:96.6%;
+        height:78%;
+        padding-top:10%;
+    }
+    #main-bar-u{
+        width:100%;
+        height:1.5%;
+        border-radius: 2px;
+    }
+    #main-box-c{
+        height:97%;
+        width:97%;
+        margin:0% 1.5%;
+    }
+    #main-bar-d{
+        height:1.5%;
+        width:100%;
+        border-radius: 2px;
+    }
 }
+
+@media all and (orientation: portrait) {
+    #main-base {
+        top:0%;
+        height:100%;
+        left:0%;
+        width:100%;
+    }
+    #main-bar-u{
+        display: none;
+    }
+    #main-box-c{
+        top:0%;
+        height:100%;
+        left:0%;
+        width:100%;
+    }
+    #main-bar-d{
+        display: none;
+    }
+}
+
+
+
+
+
+/*
 #main-base::-webkit-scrollbar{
   width: 8px;
 }
@@ -277,69 +192,32 @@ html, body{
 .role-tgl:checked ~ .exp-box {
     height:100%;
 }
+*/
 
 
+
+
+
+
+
+
+
+/*
+@media all and (orientation: landscape) {
+}
+
+@media all and (orientation: portrait) {
+}*/
+
+
+
+/* Design of logo div
+ */
+
+
+
+*/
 /* Setting about each area size and point
  * ( width > height ) = landscape site
  * ( width < height ) = portrait
  */
-@media all and (orientation: landscape) {
-    #area-logo {
-        left:6.25%;
-        width:12.5%;
-        height:18.75%;
-    }
-    #area-wind {
-        top: 6.25%;
-        left:31.25%;
-        height:62.5%;
-        width:62.5%;
-    }
-    #area-h1 {
-        top:12.5%;
-        left:31.25%;
-        height:12.5%;
-        width:40%;
-    }
-    #area-main {
-        top: 18.75%;
-        left:25%;
-        height:75%;
-        width:62.5%;
-    }
-
-    #area-menu {
-        top: 6.25%;
-        left:6.25%;
-        height:87.5%;
-        width:12.5%;
-        z-index: 1;
-    }
-}
-
-@media all and (orientation: portrait) {
-    #area-logo {
-        top: 0%;
-        left:31.25%;
-        height:12.5%;
-        width:37.5%;
-    }
-    #area-h1 {
-        top:3%;
-        left:12.5%;
-        height:12.5%;
-        width:50%;
-    }
-    #area-wind {
-        top: 7%;
-        left:18%;
-        height:75%;
-        width:75%;
-    }
-    #area-main {
-        top: 12.5%;
-        left:12.5%;
-        height:78%;
-        width:78%;
-    }
-}
