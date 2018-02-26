@@ -7,8 +7,6 @@
     z-index: 10;
 }
 
-.menu-a{
-}
 .menu-a:hover{
     -webkit-animation: key-menuhover 0.2s ease-in-out 0s  forwards;
     animation: key-menuhover 0.2s ease-in-out 0s  forwards;
@@ -28,11 +26,11 @@
         height:87.5%;
         width:12.5%;
     }
-    #menu-hide{
+    #menu-hide-cover{
         display: none;
         pointer-events: none;
     }
-    #menu-view{
+    #menu-switchbtn{
         display: none;
     }
 
@@ -63,10 +61,11 @@
         height:100%;
         left:0%;
         width:100%;
+        pointer-events: none;
     }
 
 
-    #menu-hide{
+    #menu-hide-cover{
         /* over dark */
         z-index: 10;
         position: fixed;
@@ -77,10 +76,10 @@
         pointer-events: none;
 
         /* anime speed*/
-        -webkit-transition: -webkit-background-color .4s;
-        transition: background-color .4s;
+        -webkit-transition: -webkit-background-color .3s;
+        transition: background-color .3s;
     }
-    #menu-tgl:checked ~ #menu-hide {
+    #menu-tgl:checked ~ #menu-hide-cover {
         /* anime */
         pointer-events: auto;
         background-color: rgba(0, 0, 0, .75);
@@ -91,6 +90,7 @@
         /* anime */
         opacity: 0;
         z-index: 11;
+        pointer-events: none;
 
         position: absolute;
         top:6.75%;
@@ -98,8 +98,8 @@
         left:6.75%;
         width:86.5%;
 
-        -webkit-transition: -webkit-transform .3s;
-        transition: 0.3s;
+        -webkit-transition: -webkit-transform .2s;
+        transition: 0.2s;
     }
     #menu-tgl:checked ~ #menu-base {
         /* anime */
@@ -112,6 +112,7 @@
         /* anime */
         opacity: 0;
         z-index: 8;
+        pointer-events: none;
 
         position: absolute;
         top:6.75%;
@@ -119,8 +120,8 @@
         left:6.75%;
         width:86.5%;
 
-        -webkit-transition: -webkit-transform 1s;
-        transition: transform  1s;
+        -webkit-transition: -webkit-transform 1.6s;
+        transition: transform 1.6s;
 
     }
     #menu-tgl:checked ~ #menu-logo {
@@ -137,7 +138,8 @@
 
     #menu-link{
         opacity: 0;
-        z-index: 8;
+        z-index: 8;;
+        pointer-events: auto;
 
         position: fixed;
         top:37.5%;
@@ -159,24 +161,96 @@
     }
 
 
-    #menu-view {
-        z-index: 13;
+    #menu-switchbtn {
         position: absolute;
-        background-color: #f5dd5d;
+        left: 76.25%;
+        top: 88.75%;
+    }
 
-        left:-1vw;
-        top:12vh;
-        width:6.5vw;
-        height:6.5vw;
-        opacity:0.7;
+    #menu-contact-btn {
+        position: absolute;
+        left: 64.75%;
+        top: 88.75%;
+
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        --webkit-align-items: center;
+
+    }
+    #menu-contact-btn > i{
+        pointer-events: none;
+        color:#FFFFFF;
+
+    }
+
+    /* Floating Action Button */
+    .button-FAB{
+        pointer-events: auto;
+        z-index: 13;
+        width:10vw;
+        height:10vw;
+        border-radius: 50%;
         -webkit-transition: -webkit-transform .3s;
         transition: transform  .3s;
     }
     .menu-btnbar{
+        z-index: 14;
+        background-color: #FFFFFF;
+        border-radius:10%;
+        position: absolute;
+        left: 78.5%;
+        width:6%;
+        height:0.4%;
+        pointer-events: none;
+        -webkit-transition: all .7s;
+        transition: all  .7s;
+    }
+    #menu-view-btn1{
+        top: 90%;
+    }
+    #menu-view-btn2{
+        top: 91.25%;
+    }
+    #menu-view-btn3{
+        top: 92.5%;
+    }
+    #menu-tgl:checked ~ #menu-view-btn1 {
+        -webkit-transform: translateY(1.25vh) rotate(-45deg);
+        transform:translateY(1.25vh) rotate(-45deg) ;
+    }
+    #menu-tgl:checked ~ #menu-view-btn2 {
+        opacity: 0;
+    }
+    #menu-tgl:checked ~ #menu-view-btn3 {
+        -webkit-transform: translateY(-1.25vh) rotate(45deg);
+        transform:translateY(-1.25vh) rotate(45deg);
+    }
+}
+/*
+@keyframes key-menuhover {
+    0% {
+        transform: translateY(0px);
+        font-size:1vw;
+    }
+    100% {
+        transform: translateY(-2vh) ;
+        font-size:3vw;
     }
 }
 
-
+@-webkit-keyframes key-menuhover {
+    0% {
+        -webkit-transform: translateY(0px) ;
+        font-size:1vw;
+    }
+    100% {
+        -webkit-transform: translateY(-2vh) ;
+        font-size:3vw;
+    }
+}*/
 /*
 
 
@@ -205,28 +279,9 @@
         transition: all  .7s;
         border-radius: 1px;
     }
-    #menu-view-btn1{
-        top:12.8vh;
-    }
-    #menu-view-btn2{
-        top:13.5vh;
-    }
-    #menu-view-btn3{
-         top:14.00vh;
-    }
 
 
-    #menu-tgl:checked ~ #menu-view-btn1 {
-        -webkit-transform:  translateX(93.5vw) translateY(0.6vh) rotate(-45deg);
-        transform: translateX(93.5vw) translateY(0.6vh) rotate(-45deg) ;
-    }
-    #menu-tgl:checked ~ #menu-view-btn2 {
-        opacity: 0;
-    }
-    #menu-tgl:checked ~ #menu-view-btn3 {
-        -webkit-transform:  translateX(93.5vw) translateY(-0.vh) rotate(45deg);
-        transform:  translateX(93.5vw) translateY(-0.6vh) rotate(45deg);
-    }
+
 }
 
 */

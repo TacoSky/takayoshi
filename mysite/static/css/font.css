@@ -1,34 +1,19 @@
 
 /* Font Style Typo
  */
-body{
+body,html,h1,h2,h3,p,a,em,div{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.1em;
 }
 h1{
     font-family: 'Balthazar', serif;
     font-feature-settings : "palt";
-
     font-weight: bold;
-/*
-    color:#ffb16d;
-    text-shadow:
-        -0.4vw -0.4vw 0 #223a64,
-        0.4vw 0.4vw 0 #223a64,
-        -0.4vw 0.4vw 0 #223a64,
-        -0.5vw 0.5vw 0 #a8d5ff,
-        -0.6vw 0.6vw 0 #a8d5ff,
-        -0.7vw 0.7vw 0 #a8d5ff,
-        -0.8vw 0.8vw 0 #a8d5ff;
-    transform: scaleY(0.7);
-    -webkit-transform: scaleY(0.7);
-    -moz-transform: scaleY(0.7);
-    margin:0;
-    */
     text-align: left;
     display:inline-block;
 }
-h2,h3,p,.main-a{
+h2,h3,p,{
     font-family: 'Roboto Slab', serif;
     color:#1a202a;
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
@@ -45,24 +30,12 @@ h2{
     text-shadow: -0.1vh 0.2vh 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
 }
-h2:after{
-    content: "";
-    position: absolute;
-    left:0;
-    bottom: 15%;
-    width:98%;
-    height:0.3vh;
-    background: #223a64;
-    background: -moz-linear-gradient(left, #223a64 0%, #a8d5ff 70%, #223a64 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #223a64 0%,#a8d5ff 70%,#223a64 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); /* IE6-9 */
-}
 em{
     font-weight: bold;
     color:#cb5f00;
     text-shadow: 0px 0px 0.1vh #ffb16d;
 }
+
 .main-a{
     color:#223a64;
 }
@@ -79,19 +52,150 @@ a{
     display: block;
 }
 
+/*}*/
 /* FontSize
  */
+@media all and (max-width:420px){
+
+    html {
+        font-size: calc(125% + 6 * (100vw - 400px) / 600);
+    }
+    p,span,a,em {
+        font-size: 1em;
+    }
+    h1{
+        font-size:2.0em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3,.main-a{
+        font-size: 1.2em;
+    }
+
+
+}
+@media all and (min-width:421px) and (max-width:1000px){
+
+    html {
+        font-size: calc(140% + 5 * (100vw - 1000px) / 1000);
+    }
+    p,span,a,em {
+        font-size: 1em;
+    }
+    h1{
+        font-size:2.5em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3,.main-a{
+        font-size: 1.2em;
+    }
+
+
+
+}
+
+@media all and (min-width:1001px){
+
+    html {
+        font-size: calc(150% + 5 * (100vw - 1000px) / 1000);
+    }
+    p,span,a,em {
+        font-size: 1em;
+    }
+    h1{
+        font-size:4em;
+
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3,.main-a{
+        font-size: 1.4em;
+    }
+
+}
+@keyframes key-menuhover {
+    0% {
+        transform: translateY(0px);
+        font-size:1.2em;
+    }
+    100% {
+        transform: translateY(-0.5vh);
+        font-size:1.3em;
+    }
+}
+
+@-webkit-keyframes key-menuhover {
+    0% {
+        -webkit-transform: translateY(0px);
+        font-size:1.2em;
+    }
+    100% {
+        -webkit-transform: translateY(-0.5vh);
+        font-size:1.3em;
+    }
+}
+
+
+p,.main-a{
+    line-height: 3em;
+}
+
+h2{
+    line-height: 4vw;
+}
+h3{
+    line-height: 3.5vw;
+}
+p,h2,h3,.main-a{
+    text-indent: 1.6vw;
+}
+.menu-a{
+    margin-right: -0.3vw;
+    line-height: 2vw;
+
+    margin-left: 0.8vw;
+    text-indent: -0.8vw;
+}
+.manu-li{
+    margin-bottom: 2.3vw;
+}
+
+
+
+
+
+
+/*h2:after{*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*left:0;*/
+    /*bottom: 15%;*/
+    /*width:98%;*/
+    /*height:0.3vh;*/
+    /*background: #223a64;*/
+    /*background: -moz-linear-gradient(left, #223a64 0%, #a8d5ff 70%, #223a64 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(left, #223a64 0%,#a8d5ff 70%,#223a64 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to right, #223a64 0%,#a8d5ff 70%,#223a64 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); !* IE6-9 *!*/
+/*}*/
+/* FontSize
+ */
+/*
 
 @media all and (max-width:384px){
     h1{
         font-size:13vw;
 
-        /*
+        !*
         font-size:15vw;
         line-height: 14vw;
         letter-spacing: 0.6vw;
         margin-left: 7vw;
-        text-indent: -7vw;*/
+        text-indent: -7vw;*!
     }
     h2{
         font-size:6vw;
@@ -249,4 +353,4 @@ a{
     .manu-li{
         margin-bottom: 2.3vw;
     }
-}
+}*/
