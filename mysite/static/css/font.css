@@ -7,6 +7,9 @@ body,html,h1,h2,h3,p,a,em,div{
     letter-spacing: 0.1em;
     opacity:1;
 }
+p,span,a,em {
+    font-size: 1em;
+}
 h1 {
     font-family: 'Balthazar', serif;
     font-feature-settings: "palt";
@@ -16,13 +19,14 @@ h1 {
 }
 
 
-h2,h3,p{
+h2,h3,p,span{
     font-family: 'Roboto Slab', serif;
     color:#1a202a;
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
     margin-top:0.6vw;
     margin-bottom:1.4vw;
+    display: inline-block;
 }
 h2{
     font-weight: normal;
@@ -37,20 +41,19 @@ em{
     text-shadow: 0px 0px 0.1vh #ffb16d;
 }
 
+a{
+    display: block;
+}
 .main-a{
     color:#223a64;
 }
 .menu-a{
+    text-decoration: none;
     font-family: 'Bellefair', serif;
     color:#1a202a;
     font-weight: normal;
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
-
-}
-a{
-    text-decoration: none;
-    display: block;
 }
 
 /*}*/
@@ -60,11 +63,8 @@ a{
     html {
         font-size: calc(80% + 4 * (100vw - 100px) / 300);
     }
-    p,span,a,em {
-        font-size: 1em;
-    }
     h1{
-        font-size:1.6em;
+        font-size:2.2em;
     }
     h2{
         font-size: 1.5em;
@@ -77,11 +77,8 @@ a{
     html {
         font-size: calc(100% + 3 * (100vw - 400px) / 600);
     }
-    p,span,a,em {
-        font-size: 1em;
-    }
     h1{
-        font-size:2.4em;
+        font-size:2.8em;
     }
     h2{
         font-size: 1.5em;
@@ -95,11 +92,8 @@ a{
     html {
         font-size: calc(110% + 2 * (100vw - 1000px) / 1000);
     }
-    p,span,a,em {
-        font-size: 1em;
-    }
     h1{
-        font-size:3em;
+        font-size:4em;
 
     }
     h2{

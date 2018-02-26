@@ -4,6 +4,18 @@ from .models import Company, JobeRole, Experience
 
 # Create your views here.
 
+class CtnRoles:
+    def __init__(self, arvrole, arvexps):
+        self.role = arvrole
+        self.exps = arvexps
+
+
+class CtnCompanies:
+    def __init__(self, arvcomp, arvroles):
+        self.comp = arvcomp
+        self.roles = arvroles
+
+
 
 def index(request):
     """index page"""
@@ -21,12 +33,23 @@ def education(request):
 
 
 def experiences(request):
+    datacomps = []
+
     """get experiences"""
+    companies = Company.objects.all().order_by('-startdate')
+    for comp in companies:
+
+        temproles = []
+        joberoles = JobeRole.objects.all().filter(company=comp).order_by('-startdate')
+        for role in joberoles:
+            tempexps = Experience.objects.all().filter(role=role)
+            temproles.append(CtnRoles(role, tempexps))
+        datacomps.append(CtnCompanies(comp, temproles))
+
     data = {
-        'companies': Company.objects.all(),
-        'jobroles': JobeRole.objects.all(),
-        'experiences': Experience.objects.all(),
+        'companies': datacomps,
     }
+
     """experiences page"""
     return render(request,'experiences.html', data)
 

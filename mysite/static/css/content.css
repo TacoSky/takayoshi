@@ -93,5 +93,64 @@
 }
 
 
+/* Design of wind div
+ */
+.cmp-label{
+    font-size: 0.9em;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+    -webkit-align-items: center; /* Safari */
+    align-items:         center;
+}
 
+.cmp-desc, .cmp-date>p, .role-description, .role-startend>p{
+    color:#444444;
+    font-size: 0.8em;
+    margin:0;
+    padding:0;
+    line-height:1.2em;
+}
+
+.role-tgl{
+    display: none;
+}
+
+.role-box{
+}
+.role-label{
+    width:100%;
+    height:auto;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+    -webkit-align-items: center; /* Safari */
+    align-items:         center;
+}
+.role-description{
+    width:80%;
+}
+.role-btn{
+    border-radius: 50%;
+    display: inline-block;
+    z-index:8;
+    width:6vw;
+    height:6vw;
+    margin:0.5vw;
+    color: #000000;
+    background-color: #000000;
+}
+.role-btn-label {
+    width:100%;
+    heigt:100%;
+}
+.exp-box{
+    height:0;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+}
+.role-tgl:checked ~ .exp-box{
+    height:auto;
+}
 
