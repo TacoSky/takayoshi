@@ -14,6 +14,7 @@
         <link href="{% static 'css/reset.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
         <link href="{% static 'css/design.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
         <link href="{% static 'css/menu.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
+        <link href="{% static 'css/content.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
         <link href="{% static 'css/font.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
         <link href="{% static 'css/style.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
         <link href="{% static 'css/bar.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
@@ -52,7 +53,7 @@
 
             <div id="area-h1" class="shadow-3">
                 <div id="h1-base">
-                    <div id="h1-content"><h1>{% block h1content %}H1{% endblock %}</h1></div>
+                    <div id="h1-content" class="style-h1"><h1>{% block h1content %}H1{% endblock %}</h1></div>
                 </div>
             </div>
 
@@ -65,13 +66,9 @@
             <div id="area-main" class="shadow-2">
                 <div id="main-bar-u" class="grad-HB"></div>
                 <div id="main-box-c" class="style-tdot">
-
-                    <p>TESTtest</p>
-<!--
                     <div id="main-base">
                         {% block maincontent %}{% endblock %}
                     </div>
-        -->
                 </div>
                 <div id="main-bar-d" class="grad-HB"></div>
             </div>

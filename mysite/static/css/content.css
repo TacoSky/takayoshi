@@ -1,0 +1,97 @@
+
+
+
+/* Design of h1 div
+ */
+#h1-base {
+    position:static;
+    width:100%;
+    height:100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+#h1-content {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+   --webkit-align-items: center;
+    position:static;
+    height:auto;
+}
+/* Design of wind div
+ */
+#wind-base {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+#wind-img{
+    width:100%;
+}
+
+/* Design of main div
+ */
+
+#main-base {
+    position: absolute;
+    overflow:scroll;
+    overflow-x: hidden;
+    padding:0 2%;
+}
+#main-box-c{
+}
+
+@media all and (orientation: landscape) {
+    #main-base {
+        top:1.7%;
+        left:1.7%;
+        width:92.6%;
+        height:94%;
+        padding-top:2%;
+    }
+    #main-bar-u{
+        width:100%;
+        height:1.5%;
+        border-radius: 2px;
+    }
+    #main-box-c{
+        opacity:0.6;
+        height:97%;
+        width:97%;
+        margin:0% 1.5%;
+        padding-top:1%;
+    }
+    #main-bar-d{
+        height:1.5%;
+        width:100%;
+        border-radius: 2px;
+    }
+}
+
+@media all and (orientation: portrait) {
+    #main-base {
+        top:0%;
+        height:100%;
+        left:0%;
+        width:96%;
+    }
+    #main-bar-u{
+        display: none;
+    }
+    #main-box-c{
+        opacity:0.7;
+        top:0%;
+        height:100%;
+        left:0%;
+        width:100%;
+    }
+    #main-bar-d{
+        display: none;
+    }
+}
+
+
+
+

@@ -20,7 +20,7 @@
 {% block maincontent %}
     {% for company in companies %}
         <div class="cmp-box">
-            <h2 class="cmp-h2">{{ company.name }}</h2>
+            <h2 class="cmp-h2 style-h2">{{ company.name }}</h2>
             <div class="cmp-info">
                 <p>
                     {{ company.startdate|date:"Y M" }} - {{ company.enddate|date:"Y M" }}

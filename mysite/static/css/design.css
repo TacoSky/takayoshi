@@ -1,24 +1,18 @@
-/* Material iconsを利用する */
+/* Material icons */
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* 推奨サイズ */
+  font-size: 24px;
   display: inline-block;
   width: 1em;
   height: 1em;
   line-height: 1;
   text-transform: none;
 
-  /* WebKitブラウザサポート */
   -webkit-font-smoothing: antialiased;
-  /* Chrome、Safariサポート */
   text-rendering: optimizeLegibility;
-
-  /* Firefoxサポート */
   -moz-osx-font-smoothing: grayscale;
-
-  /* IEサポート */
   font-feature-settings: 'liga';
 }
 
@@ -96,151 +90,3 @@ html, body{
     }
 }
 
-
-/* Design of h1 div
- */
-#h1-base {
-    position:static;
-    width:100%;
-    height:100%;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    -webkit-justify-content: center;
-}
-#h1-content {
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-   --webkit-align-items: center;
-    position:static;
-    height:auto;
-}
-/* Design of wind div
- */
-#wind-base {
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
-#wind-img{
-    width:100%;
-}
-
-/* Design of main div
- */
-
-#main-base {
-    position: absolute;
-    overflow:scroll;
-    overflow-x: hidden;
-}
-#main-box-c{
-    opacity:0.8;
-    position: relative;
-}
-
-@media all and (orientation: landscape) {
-    #main-base {
-        top:1.7%;
-        left:1.7%;
-        width:96.6%;
-        height:78%;
-        padding-top:10%;
-    }
-    #main-bar-u{
-        width:100%;
-        height:1.5%;
-        border-radius: 2px;
-    }
-    #main-box-c{
-        height:97%;
-        width:97%;
-        margin:0% 1.5%;
-    }
-    #main-bar-d{
-        height:1.5%;
-        width:100%;
-        border-radius: 2px;
-    }
-}
-
-@media all and (orientation: portrait) {
-    #main-base {
-        top:0%;
-        height:100%;
-        left:0%;
-        width:100%;
-    }
-    #main-bar-u{
-        display: none;
-    }
-    #main-box-c{
-        top:0%;
-        height:100%;
-        left:0%;
-        width:100%;
-    }
-    #main-bar-d{
-        display: none;
-    }
-}
-
-
-
-
-
-/*
-#main-base::-webkit-scrollbar{
-  width: 8px;
-}
-#main-base::-webkit-scrollbar-track{
-  background: #fff;
-  border: none;
-  border-radius: 8px;
-  box-shadow: inset 0 0 2px #777;
-}
-#main-base::-webkit-scrollbar-thumb{
-  background: #aaa;
-  border-radius: 8px;
-  box-shadow: none;
-}
-
-
-.exp-box {
-    height:0px;
-    overflow:hidden;
-    transition: transform .5s;
-}
-.role-tgl:checked ~ .exp-box {
-    height:100%;
-}
-*/
-
-
-
-
-
-
-
-
-
-/*
-@media all and (orientation: landscape) {
-}
-
-@media all and (orientation: portrait) {
-}*/
-
-
-
-/* Design of logo div
- */
-
-
-
-*/
-/* Setting about each area size and point
- * ( width > height ) = landscape site
- * ( width < height ) = portrait
- */
