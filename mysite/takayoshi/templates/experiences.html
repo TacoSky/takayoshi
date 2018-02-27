@@ -18,20 +18,19 @@
 {% endblock %}
 
 {% block maincontent %}
-    <p> </p>
     {% for company in companies %}
-        <div class="cmp-box">
+        <div class="cmp-area">
             <h2 class="cmp-h2 style-h2">{{ company.comp.name }}</h2>
             <div class="cmp-info">
                 <div class="cmp-label">
-                    <span class="cmp-date"><p>{{ company.comp.startdate|date:"y M" }}</p><p> - {{ company.comp.enddate|date:"y M" }}</p></span>
+                    <span class="cmp-date font-detail"><p>{{ company.comp.startdate|date:"y M" }}</p><p> - {{ company.comp.enddate|date:"y M" }}</p></span>
 
-                    <span class="cmp-place">{{ company.comp.place }}</span>
+                    <span class="cmp-place font-detail">{{ company.comp.place }}</span>
                     {% if company.comp.url != "" %}
                         <a href="{{ company.comp.url }}">Web Site</a>
                     {% endif %}
                 </div>
-                <p class="cmp-desc">
+                <p class="cmp-desc font-detail">
                     {{ company.comp.description }}
                 </p>
             </div>
@@ -39,25 +38,21 @@
                 {% for jobrole in company.roles %}
                     <div class="role-box">
                         <input type="checkbox" id="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}"  class="role-tgl">
+                        <label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-btn-label" ><div class="role-btn"></div></label>
                         <label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-title-lbl">
                             <div class="role-label">
                                 <h3 class="role-h3">
                                     {{ jobrole.role.name }}
                                 </h3>
-                                <span class="role-startend">
-                                    <p>{{ jobrole.role.startdate|date:"y M" }}</p> - <p>{{ jobrole.role.enddate|date:"y M" }}</p>
-                                </span>
                             </div>
                         </label>
-                    <!--
-                        <div class="role-btn"><label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-btn-label" ></label></div>
-
-                    -->
-                        <label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-btn-label" ><div class="role-btn"></div></label>
-                        <p class="role-description">
-                            {{ jobrole.role.description }}
-                        </p>
                         <div class="exp-box">
+                            <span class="role-startend font-detail">
+                                <p>{{ jobrole.role.startdate|date:"y M" }}</p> - <p>{{ jobrole.role.enddate|date:"y M" }}</p>
+                            </span>
+                            <p class="role-description font-detail">
+                                {{ jobrole.role.description }}
+                            </p>
                             {% for experience in jobrole.exps %}
                                 <p>
                                     <em>{{ experience.name }}</em>

@@ -7,40 +7,36 @@ body,html,h1,h2,h3,p,a,em,div{
     letter-spacing: 0.1em;
     opacity:1;
 }
-p,span,a,em {
-    font-size: 1em;
-}
 h1 {
     font-family: 'Balthazar', serif;
     font-feature-settings: "palt";
     font-weight: bold;
     text-align: left;
     display: inline-block;
+    transform: rotate( -8deg )
 }
-
-
+h2{
+    font-weight: normal;
+    position: relative;
+    font-feature-settings : "palt";
+}
 h2,h3,p,span{
     font-family: 'Roboto Slab', serif;
     color:#1a202a;
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
-    margin-top:0.6vw;
-    margin-bottom:1.4vw;
-    display: inline-block;
 }
-h2{
-    font-weight: normal;
-    position: relative;
-    margin-top:2.4vw;
-    margin-bottom:0vw;
-    font-feature-settings : "palt";
+h3,p,span{
+    display:inline-block;
+}
+p,span,a,em {
+    font-size: 1em;
 }
 em{
     font-weight: bold;
     color:#cb5f00;
     text-shadow: 0px 0px 0.1vh #ffb16d;
 }
-
 a{
     display: block;
 }
@@ -55,22 +51,29 @@ a{
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
     font-feature-settings : "palt";
 }
+.font-detail, .font-detail>p{
+    color:#444444;
+    font-size: 0.9em;
+    margin:0;
+    padding:0;
+    line-height:1.4em;
+}
 
 /*}*/
 /* FontSize
  */
 @media all and (max-width:400px){
     html {
-        font-size: calc(80% + 4 * (100vw - 100px) / 300);
+        font-size: calc(75% + 4 * (100vw - 100px) / 300);
     }
     h1{
-        font-size:2.2em;
+        font-size:2.4em;
     }
     h2{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     h3,.main-a{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 @media all and (min-width:401px) and (max-width:1000px){
@@ -97,13 +100,21 @@ a{
 
     }
     h2{
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
     h3,.main-a{
         font-size: 1.4em;
     }
 }
-
+h1{
+    margin: 0;
+}
+h2{
+    margin: 0.8em 0 0.4em 0;
+}
+h3{
+    margin: 0.4em 0 0.1em 0;
+}
 p,h2,h3,.main-a{
     text-indent: 0.5em;
     line-height: 1.3em;
