@@ -13,14 +13,14 @@ h1 {
     font-weight: bold;
     text-align: left;
     display: inline-block;
-    transform: rotate( -8deg )
+    transform: rotate( -5deg )
 }
 h2{
     font-weight: normal;
     position: relative;
     font-feature-settings : "palt";
 }
-h2,h3,p,span{
+h2,h3,p,span,label{
     font-family: 'Roboto Slab', serif;
     color:#1a202a;
     text-shadow: 0px 0px 0.1vh rgba(26,32,42,0.5);
@@ -115,7 +115,7 @@ h2{
 h3{
     margin: 0.4em 0 0.1em 0;
 }
-p,h2,h3,.main-a{
+p{
     text-indent: 0.5em;
     line-height: 1.3em;
     padding-bottom: 0.2em;
@@ -137,212 +137,29 @@ p,h2,h3,.main-a{
 
 
 
-@keyframes key-menuhover {
+.key-hover:hover{
+    -webkit-animation: key-hover 0.2s ease-in-out 0s  forwards;
+    animation: key-hover 0.2s ease-in-out 0s  forwards;
+}
+@keyframes key-hover {
     0% {
         transform: translateY(0px);
-        font-size:1.2em;
+        font-size:1em;
     }
     100% {
-        transform: translateY(-0.5vh);
-        font-size:1.3em;
+        transform: translateY(-0.2em);
+        font-size:1.1em;
     }
 }
 
-@-webkit-keyframes key-menuhover {
+@-webkit-keyframes key-hover {
     0% {
         -webkit-transform: translateY(0px);
-        font-size:1.2em;
+        font-size:1em;
     }
     100% {
-        -webkit-transform: translateY(-0.5vh);
-        font-size:1.3em;
+        -webkit-transform: translateY(-0.2em);
+        font-size:1.1em;
     }
 }
 
-
-
-/*h2:after{*/
-    /*content: "";*/
-    /*position: absolute;*/
-    /*left:0;*/
-    /*bottom: 15%;*/
-    /*width:98%;*/
-    /*height:0.3vh;*/
-    /*background: #223a64;*/
-    /*background: -moz-linear-gradient(left, #223a64 0%, #a8d5ff 70%, #223a64 100%); !* FF3.6-15 *!*/
-    /*background: -webkit-linear-gradient(left, #223a64 0%,#a8d5ff 70%,#223a64 100%); !* Chrome10-25,Safari5.1-6 *!*/
-    /*background: linear-gradient(to right, #223a64 0%,#a8d5ff 70%,#223a64 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); !* IE6-9 *!*/
-/*}*/
-/* FontSize
- */
-/*
-
-@media all and (max-width:384px){
-    h1{
-        font-size:13vw;
-
-        !*
-        font-size:15vw;
-        line-height: 14vw;
-        letter-spacing: 0.6vw;
-        margin-left: 7vw;
-        text-indent: -7vw;*!
-    }
-    h2{
-        font-size:6vw;
-        line-height: 8vw;
-    }
-    h3{
-        font-size:5vw;
-        line-height: 7vw;
-
-    }
-    p,.main-a{
-        font-size: 3.3vw;
-        line-height: 4.5vw;
-        margin-right: -0.23vw;
-        letter-spacing: 0.23vw;
-    }
-    p,h2,h3,.main-a{
-        text-indent: 1.6vw;
-    }
-    .menu-a{
-        font-size:5.4vw;
-        margin-right: -0.5vw;
-        letter-spacing: 0.5vw;
-        line-height: 5.8.vw;
-
-        margin-left: 3vw;
-        text-indent: -3vw;
-    }
-    .manu-li{
-        margin-bottom: 4vw;
-    }
-
-}
-@media all and (min-width: 385px) and (max-width:768px) and (orientation: landscape){
-
-    h1{
-        font-size:9vw;
-        line-height: 7vw;
-        letter-spacing: 0.4vw;
-        margin-left: 3vw;
-        text-indent: -3vw;
-    }
-    h2{
-        font-size:4vw;
-        line-height: 5.4vw;
-
-    }
-    h3{
-        font-size:3vw;
-        line-height: 3.5vw;
-
-    }
-    p,.main-a{
-        font-size:2.4vw;
-        line-height: 3vw;
-        margin-right: -0.23vw;
-        letter-spacing: 0.23vw;
-    }
-    p,h2,h3,.main-a{
-        text-indent: 1.6vw;
-    }
-    .menu-a{
-        font-size:2.8vw;
-        margin-right: -0.5vw;
-        letter-spacing: 0.5vw;
-        line-height: 2.9vw;
-
-        margin-left: 1.5vw;
-        text-indent: -1.5vw;
-    }
-    .manu-li{
-        margin-bottom: 4vw;
-    }
-}
-
-@media all and (min-width: 385px) and (max-width:768px) and (orientation: portrait) {
-
-    h1{
-        font-size:12vw;
-        line-height: 11vw;
-        letter-spacing: 0.6vw;
-        margin-left: 7vw;
-        text-indent: -7vw;
-    }
-    h2{
-        font-size:5vw;
-        line-height: 7vw;
-
-    }
-    h3{
-        font-size:4vw;
-        line-height: 5vw;
-
-    }
-    p,.main-a{
-        font-size:3vw;
-        line-height: 3.8vw;
-        margin-right: -0.23vw;
-        letter-spacing: 0.23vw;
-    }
-    p,h2,h3,.main-a{
-        text-indent: 1.6vw;
-    }
-    .menu-a{
-        font-size:4.8vw;
-        margin-right: -0.6vw;
-        letter-spacing: 0.6vw;
-        line-height: 5.vw;
-
-        margin-left: 3vw;
-        text-indent: -3vw;
-    }
-    .manu-li{
-        margin-bottom: 2.6vw;
-    }
-}
-
-@media all and (min-width: 769px) {
-    h1{
-        font-size:8vw;
-        line-height: 6.2vw;
-        letter-spacing: 0.4vw;
-        margin-left: 3vw;
-        text-indent: -3vw;
-    }
-    h2{
-        font-size:2.5vw;
-        line-height: 4vw;
-
-    }
-    h3{
-        font-size:2vw;
-        line-height: 3.5vw;
-
-    }
-    p,.main-a{
-        font-size:1.6vw;
-        line-height: 2.4vw;
-        margin-right: -0.23vw;
-        letter-spacing: 0.23vw;
-    }
-    p,h2,h3,.main-a{
-        text-indent: 1.6vw;
-    }
-
-    .menu-a{
-        font-size:1.8vw;
-        margin-right: -0.3vw;
-        letter-spacing: 0.3vw;
-        line-height: 2vw;
-
-        margin-left: 0.8vw;
-        text-indent: -0.8vw;
-    }
-    .manu-li{
-        margin-bottom: 2.3vw;
-    }
-}*/

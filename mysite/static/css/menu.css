@@ -9,10 +9,6 @@
 .menu-a{
     display:inline-block;
 }
-.menu-a:hover{
-    -webkit-animation: key-menuhover 0.2s ease-in-out 0s  forwards;
-    animation: key-menuhover 0.2s ease-in-out 0s  forwards;
-}
 #menu-tgl{
     display: none;
 }

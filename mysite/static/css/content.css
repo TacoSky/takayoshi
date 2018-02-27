@@ -102,13 +102,28 @@
     justify-content:         space-between;
     -webkit-align-items: center; /* Safari */
     align-items:         center;
-    margin-bottom:0.2em;
+    margin-bottom:0.3em;
 }
 
 
 .cmp-desc{
     margin-bottom:0.2em;
 }
+
+.cmp-url>a{
+    text-decoration: none;
+    -webkit-filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+    -moz-filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+    -o-filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+    filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+}
+
+
+
 .role-tgl{
     display: none;
 }
@@ -116,36 +131,46 @@
 .role-box{
 }
 .role-label{
-    /*
-    width:100%;
-    height:auto;
-    -webkit-justify-content: space-between;
-    justify-content:         space-between;
-    -webkit-align-items: center;
-    align-items:         center;
-    */
     display: inline-block;
 }
 .role-description{
     width:80%;
 }
-.role-btn{
-    border-radius: 50%;
+
+.role-btn-label>i {
+    font-size:0.85em;
+}
+.role-btn-label{
+
     display: inline-block;
     z-index:8;
-    color: #000000;
-    background-color: #000000;
-}
-.role-btn{
+    border: thin solid #1a202a;
     width: 0.8em;
     height: 0.8em;
-    margin:0em 0.4em;
+    border-radius: 50%;
+
+    -webkit-filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+    -moz-filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+    -o-filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+    filter:
+            drop-shadow(-1px 1px 0px rgb(26, 32, 42));
+
+    -webkit-transition: -webkit-transform .4s;
+    transition: 0.4s;
+    transform: rotate( 45deg );
 }
-.role-btn-label {
-    width:100%;
-    height:2.5em;
+.role-tgl:checked ~ .role-btn-label{
+    transform: rotate( 0deg );
 }
+.role-btn>i{
+    font-size: 0.85em;
+}
+
 .exp-box{
+    margin-left:1.4em;
     height:0;
     overflow: hidden;
     -webkit-transition: -webkit-transform 0.6s;
@@ -155,4 +180,12 @@
     height:auto;
 }
 
-
+.role-info{
+    margin-bottom:0.3em;
+}
+.role-description{
+    width:100%;
+}
+.role-info p{
+    text-indent: 0em;
+}
