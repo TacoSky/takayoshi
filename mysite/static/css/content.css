@@ -154,7 +154,7 @@
     width: 0.8em;
     height: 0.8em;
 
-    transform: rotate( 585deg );
+    transform: rotate( -585deg );
     -webkit-transition: -webkit-transform 1s;
     transition: 1s;
     -webkit-filter:
@@ -169,7 +169,7 @@
 }
 
 .exp-btn-label {
-    transform: rotate( 225deg );
+    transform: rotate( -225deg );
     -webkit-transition: -webkit-transform 1.2s;
     transition: 1.2s;
 }

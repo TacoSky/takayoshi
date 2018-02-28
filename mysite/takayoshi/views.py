@@ -15,6 +15,15 @@ class CtnCompanies:
         self.comp = arvcomp
         self.roles = arvroles
 
+class CtnKeyword:
+    def __init__(self, keyword, experience):
+        self.key = keyword
+        self.exp = experience
+
+class CtnCnCharge:
+    def __init__(self, incharge, experience):
+        self.inc = incharge
+        self.exp = experience
 
 
 def index(request):
@@ -23,8 +32,83 @@ def index(request):
 
 
 def qualities(request):
+    KasMarketer = []
+    KasEngineer = []
+    KasCreator  = []
+    CasMarketer = []
+    CasEngineer = []
+    CasCreator  = []
+
+    tempexps = Experience.objects.all().order_by('order')
+    for exp in tempexps:
+        for key in exp.keyword.split(","):
+            if exp.type == u'Marketer':
+                flag = False
+                for valu in KasMarketer:
+                    if key == valu.key:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    KasMarketer.append(CtnKeyword(key, 1))
+
+            if exp.type == u'Engineer':
+                flag = False
+                for valu in KasEngineer:
+                    if key == valu.key:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    KasEngineer.append(CtnKeyword(key, 1))
+
+            if exp.type == u'Creator':
+                flag = False
+                for valu in KasCreator:
+                    if key == valu.key:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    KasCreator.append(CtnKeyword(key, 1))
+
+        for crg in exp.incharge.split(","):
+            if crg == u'':
+                '''nothing to do'''
+            elif exp.type == u'Marketer':
+                flag = False
+                for valu in CasMarketer:
+                    if crg == valu.inc:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    CasMarketer.append(CtnCnCharge(crg, 1))
+
+            elif exp.type == u'Engineer':
+                flag = False
+                for valu in CasEngineer:
+                    if crg == valu.inc:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    CasEngineer.append(CtnCnCharge(crg, 1))
+
+            elif exp.type == u'Creator':
+                flag = False
+                for valu in CasCreator:
+                    if crg == valu.inc:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    CasCreator.append(CtnCnCharge(crg, 1))
+
+    data = {
+        'KasMarketer': sorted(KasMarketer, key=lambda t: t.exp, reverse=True),
+        'KasEngineer':  sorted(KasEngineer, key=lambda t: t.exp, reverse=True),
+        'KasCreator': sorted( KasCreator, key=lambda t: t.exp, reverse=True),
+        'CasMarketer':  sorted(CasMarketer, key=lambda t: t.exp, reverse=True),
+        'CasEngineer': sorted(CasEngineer, key=lambda t: t.exp, reverse=True),
+        'CasCreator':  sorted(CasCreator, key=lambda t: t.exp, reverse=True),
+    }
     """qualities page"""
-    return render(request,'qualities.html')
+    return render(request,'qualities.html', data)
 
 
 def education(request):
