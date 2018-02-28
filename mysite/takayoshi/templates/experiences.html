@@ -55,10 +55,11 @@
                             </div>
 
                             {% for experience in jobrole.exps %}
-                                <!--
+
 {% comment %}                                <input type="checkbox" id="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{% experience.id %}" class="exp-tgl">
                                 <label for="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{{ experience.name }}{% loop.counter %}" class="exp-btn-label" ><i class="material-icons">close</i></label>
-                                <label for="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{{ experience.name }}{% loop.counter %}" class="exp-title-lbl"></label>-->{% endcomment %}
+                                <label for="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{{ experience.name }}{% loop.counter %}" class="exp-title-lbl"></label>
+                                {% endcomment %}
 
                                 <div class="exp-label">
                                     <span class="exp-name">
