@@ -124,31 +124,43 @@
 
 
 
-.role-tgl{
+.role-tgl, .exp-tgl{
     display: none;
 }
 
-.role-box{
-}
-.role-label{
+.role-label, .exp-label{
     display: inline-block;
 }
-.role-description{
-    width:80%;
-}
 
-.role-btn-label>i {
+.role-btn-label>i, .exp-btn-label>i {
     font-size:0.85em;
 }
 .role-btn-label{
+    color:#223a64;
+}
+.role-btn-label, .exp-btn-label{
 
     display: inline-block;
     z-index:8;
-    border: thin solid #1a202a;
     width: 0.8em;
     height: 0.8em;
-    border-radius: 50%;
 
+    -webkit-filter:
+            drop-shadow(1.5px 0px 0px rgb(26, 32, 42));
+    -moz-filter:
+            drop-shadow(1.5px 0px 0px rgb(26, 32, 42));
+    -o-filter:
+            drop-shadow(1.5px 0px 0px rgb(26, 32, 42));
+    filter:
+            drop-shadow(0px -1.5px 0px rgb(26, 32, 42));
+
+    -webkit-transition: -webkit-transform .6s;
+    transition: 0.6s;
+    transform: rotate( 225deg );
+}
+
+.role-tgl:checked ~ .role-btn-label,
+.exp-tgl:checked ~ .exp-btn-label{
     -webkit-filter:
             drop-shadow(-1px 1px 0px rgb(26, 32, 42));
     -moz-filter:
@@ -157,15 +169,10 @@
             drop-shadow(-1px 1px 0px rgb(26, 32, 42));
     filter:
             drop-shadow(-1px 1px 0px rgb(26, 32, 42));
-
-    -webkit-transition: -webkit-transform .4s;
-    transition: 0.4s;
-    transform: rotate( 45deg );
-}
-.role-tgl:checked ~ .role-btn-label{
     transform: rotate( 0deg );
 }
-.role-btn>i{
+
+.role-btn>i, .exp-btn-label>i{
     font-size: 0.85em;
 }
 
@@ -173,8 +180,8 @@
     margin-left:1.4em;
     height:0;
     overflow: hidden;
-    -webkit-transition: -webkit-transform 0.6s;
-    transition: transform 0.6s;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
 }
 .role-tgl:checked ~ .exp-box{
     height:auto;
@@ -187,5 +194,21 @@
     width:100%;
 }
 .role-info p{
-    text-indent: 0em;
+    /*text-indent: 0em;*/
 }
+.exp-label{
+    width:90%;
+}
+.exp-desc-box{
+    margin-left:1.4em;
+    height:auto;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+.role-tgl:checked ~ .exp-box{
+.exp-tgl:checked ~ .exp-desc-box{
+    overflow: hidden;
+    height:0;
+}
+
+

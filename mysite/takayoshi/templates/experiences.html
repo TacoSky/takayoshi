@@ -41,28 +41,50 @@
                         <label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-btn-label" ><i class="material-icons">close</i></label>
                         <label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-title-lbl">
                             <div class="role-label">
-                                <h3 class="role-h3">
+                                <h3 class="role-h3 style-h3">
                                     {{ jobrole.role.name }}
                                 </h3>
                             </div>
                         </label>
                         <div class="exp-box">
-
-
-
-                            <div class="role-info">
-                                <span class="role-startend font-detail"><p>{{ jobrole.role.startdate|date:"y M" }}</p><p> - {{ jobrole.role.enddate|date:"y M" }}</p></span>
-                                <p class="role-description font-detail">
+                            <div class="role-info font-detail">
+                                <p>{{ jobrole.role.startdate|date:"y M" }}-{{ jobrole.role.enddate|date:"y M" }}</p>
+                                <p class="role-description">
                                     {{ jobrole.role.description }}
                                 </p>
                             </div>
 
-
                             {% for experience in jobrole.exps %}
-                                <p>
-                                    <em>{{ experience.name }}</em>
-                                    {{ experience.description }}
-                                </p>
+                                <!--
+{% comment %}                                <input type="checkbox" id="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{% experience.id %}" class="exp-tgl">
+                                <label for="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{{ experience.name }}{% loop.counter %}" class="exp-btn-label" ><i class="material-icons">close</i></label>
+                                <label for="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{{ experience.name }}{% loop.counter %}" class="exp-title-lbl"></label>-->{% endcomment %}
+
+                                <div class="exp-label">
+                                    <span class="exp-name">
+                                        {{ experience.name }}
+                                    </span>
+                                    {% if experience.url != "" %}
+                                        <span class="exp-url key-hover">
+                                            <a href="{{ experience.url }}" rel=noreferrer><i class="material-icons">link</i></a>
+                                        </span>
+                                    {% endif %}
+                                    {% if experience.achievement != "" %}
+                                        <span class="exp-achiev">
+                                            {{ experience.achievement }}
+                                        </span>
+                                    {% endif %}
+                                    {% if experience.keyword != "" %}
+                                        <span class="exp-keyword font-detail">
+                                            {{ experience.keyword }}
+                                        </span>
+                                    {% endif %}
+                                </div>
+                                <div class="exp-desc-box">
+                                    <p>
+                                        {{ experience.description }}
+                                    </p>
+                                </div>
                             {% endfor %}
                         </div>
                     </div>
