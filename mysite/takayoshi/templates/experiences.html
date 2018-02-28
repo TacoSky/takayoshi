@@ -26,7 +26,7 @@
                     <span class="cmp-date font-detail"><p>{{ company.comp.startdate|date:"Y M" }}</p><p> - {{ company.comp.enddate|date:"Y M" }}</p></span>
 
                     <span class="cmp-place font-detail">{{ company.comp.place }}</span>
-                    {% if company.comp.url != "nothing" %}
+                    {% if company.comp.url != "" %}
                         <span class="cmp-url key-hover"><a href="{{ company.comp.url }}" rel=noreferrer><i class="material-icons">link</i></a></span>
                     {% endif %}
                 </div>
@@ -60,26 +60,31 @@
 
 
                                     <div class="exp-label">
-                                        <span class="exp-name">
-                                            {{ experience.name }}
-                                        </span>
-                                        {% if experience.url != "" %}
-                                            <span class="exp-url key-hover">
-                                                <a href="{{ experience.url }}" rel=noreferrer><i class="material-icons">link</i></a>
+                                        <div class="exp-label-top">
+                                            <span class="exp-name">
+                                                {{ experience.name }}
                                             </span>
-                                        {% endif %}
-                                        {% if experience.achievement != "" %}
-                                            <span class="exp-achiev">
-                                                {{ experience.achievement }}
-                                            </span>
-                                        {% endif %}
+                                            {% if experience.url != "" %}
+                                                <span class="exp-url key-hover">
+                                                    <a href="{{ experience.url }}" rel=noreferrer><i class="material-icons">link</i></a>
+                                                </span>
+                                            {% endif %}
+                                        </div>
+
+                                        <div class="exp-label-bottom">
+                                            {% if experience.achievement != "" %}
+                                                <span class="exp-achiev">
+                                                    {{ experience.achievement }}
+                                                </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="exp-desc-box">
                                         {% if experience.keyword != "" %}
                                             <span class="exp-keyword font-detail">
                                                 {{ experience.keyword }}
                                             </span>
                                         {% endif %}
-                                    </div>
-                                    <div class="exp-desc-box">
                                         <p>
                                             {{ experience.description }}
                                         </p>
