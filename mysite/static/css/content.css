@@ -214,8 +214,9 @@
     align-items:         center;
 }
 .exp-desc-box{
-    margin-left:1.4em;
+    width:85%;
     height:0;
+    margin-left:1em;
     overflow: hidden;
     -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
@@ -237,4 +238,7 @@
     line-height:1.4em;
     margin:0;
     padding:0;
+}
+.exp-unit{
+    margin-bottom: 0.6em;
 }

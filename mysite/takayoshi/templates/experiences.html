@@ -80,12 +80,12 @@
                                         </div>
                                     </div>
                                     <div class="exp-desc-box">
-                                        {% if experience.keyword != "" %}
+{% comment %}                                        {% if experience.keyword != "" %}
                                             <span class="exp-keyword font-detail">
                                                 {{ experience.keyword }}
                                             </span>
-                                        {% endif %}
-                                        <p>
+                                        {% endif %}{% endcomment %}
+                                        <p class="font-detail">
                                             {{ experience.description }}
                                         </p>
                                     </div>
