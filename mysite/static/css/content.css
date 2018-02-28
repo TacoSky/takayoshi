@@ -145,6 +145,9 @@
     width: 0.8em;
     height: 0.8em;
 
+    transform: rotate( 585deg );
+    -webkit-transition: -webkit-transform 1s;
+    transition: 1s;
     -webkit-filter:
             drop-shadow(1.5px 0px 0px rgb(26, 32, 42));
     -moz-filter:
@@ -154,9 +157,12 @@
     filter:
             drop-shadow(0px -1.5px 0px rgb(26, 32, 42));
 
-    -webkit-transition: -webkit-transform 1s;
-    transition: 1s;
-    transform: rotate( 635deg );
+}
+
+.exp-btn-label {
+    transform: rotate( 225deg );
+    -webkit-transition: -webkit-transform 1.2s;
+    transition: 1.2s;
 }
 
 .role-tgl:checked ~ .role-btn-label,
@@ -195,18 +201,40 @@
     margin-bottom: 1.5em;
 }
 .exp-label{
-    width:90%;
+    width:85%;
+    margin-bottom:0.3em;
+}
+
+.exp-label-top,.exp-label-bottom{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+    -webkit-align-items: center; /* Safari */
+    align-items:         center;
 }
 .exp-desc-box{
     margin-left:1.4em;
-    height:auto;
+    height:0;
+    overflow: hidden;
     -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
 }
-.role-tgl:checked ~ .exp-box{
+.role-tgl:checked ~ .exp-box,
 .exp-tgl:checked ~ .exp-desc-box{
-    overflow: hidden;
-    height:0;
+    height:auto;
 }
+.exp-name{
+    font-size: 1em;
+    line-height:1.4em;
 
-
+}
+.exp-achiev{
+    font-weight: bold;
+    color:#cb5f00;
+    text-shadow: 0px 0px 0.1vh #ffb16d;
+    font-size: 0.7em;
+    line-height:1.4em;
+    margin:0;
+    padding:0;
+}
