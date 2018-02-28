@@ -154,9 +154,9 @@
     filter:
             drop-shadow(0px -1.5px 0px rgb(26, 32, 42));
 
-    -webkit-transition: -webkit-transform .6s;
-    transition: 0.6s;
-    transform: rotate( 225deg );
+    -webkit-transition: -webkit-transform 1s;
+    transition: 1s;
+    transform: rotate( 635deg );
 }
 
 .role-tgl:checked ~ .role-btn-label,
@@ -177,24 +177,22 @@
 }
 
 .exp-box{
-    margin-left:1.4em;
+    margin-left:0.6em;
     height:0;
     overflow: hidden;
-    -webkit-transition: -webkit-transform 0.4s;
-    transition: transform 0.4s;
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
 }
 .role-tgl:checked ~ .exp-box{
     height:auto;
 }
 
 .role-info{
-    margin-bottom:0.3em;
+    margin-bottom:0.5em;
 }
-.role-description{
-    width:100%;
-}
-.role-info p{
-    /*text-indent: 0em;*/
+.role-info-p{
+    text-indent: 1em;
+    margin-bottom: 1.5em;
 }
 .exp-label{
     width:90%;

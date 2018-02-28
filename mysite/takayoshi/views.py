@@ -36,13 +36,13 @@ def experiences(request):
     datacomps = []
 
     """get experiences"""
-    companies = Company.objects.all().order_by('-startdate')
+    companies = Company.objects.all().order_by('order')
     for comp in companies:
 
         temproles = []
-        joberoles = JobeRole.objects.all().filter(company=comp).order_by('-startdate')
+        joberoles = JobeRole.objects.all().filter(company=comp).order_by('order')
         for role in joberoles:
-            tempexps = Experience.objects.all().filter(role=role)
+            tempexps = Experience.objects.all().filter(role=role).order_by('order')
             temproles.append(CtnRoles(role, tempexps))
         datacomps.append(CtnCompanies(comp, temproles))
 

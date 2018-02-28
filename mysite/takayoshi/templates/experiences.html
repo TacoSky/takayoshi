@@ -23,7 +23,7 @@
             <h2 class="cmp-h2 style-h2">{{ company.comp.name }}</h2>
             <div class="cmp-info">
                 <div class="cmp-label">
-                    <span class="cmp-date font-detail"><p>{{ company.comp.startdate|date:"y M" }}</p><p> - {{ company.comp.enddate|date:"y M" }}</p></span>
+                    <span class="cmp-date font-detail"><p>{{ company.comp.startdate|date:"Y M" }}</p><p> - {{ company.comp.enddate|date:"Y M" }}</p></span>
 
                     <span class="cmp-place font-detail">{{ company.comp.place }}</span>
                     {% if company.comp.url != "nothing" %}
@@ -37,54 +37,53 @@
             <div class="cmp-box">
                 {% for jobrole in company.roles %}
                     <div class="role-box">
-                        <input type="checkbox" id="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}"  class="role-tgl">
-                        <label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-btn-label" ><i class="material-icons">close</i></label>
-                        <label for="role-tgl-{{ company.comp.name }}{{ jobrole.role.name }}" class="role-title-lbl">
+                        <input type="checkbox" id="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}"  class="role-tgl">
+                        <label for="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}" class="role-btn-label" ><i class="material-icons">close</i></label>
+                        <label for="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}" class="role-title-lbl">
                             <div class="role-label">
                                 <h3 class="role-h3 style-h3">
                                     {{ jobrole.role.name }}
-                                </h3>
                             </div>
                         </label>
                         <div class="exp-box">
                             <div class="role-info font-detail">
-                                <p>{{ jobrole.role.startdate|date:"y M" }}-{{ jobrole.role.enddate|date:"y M" }}</p>
-                                <p class="role-description">
+                                <p class="role-info-p font-detail">{{ jobrole.role.startdate|date:"Y M" }}-{{ jobrole.role.enddate|date:"Y M" }}
                                     {{ jobrole.role.description }}
                                 </p>
                             </div>
 
                             {% for experience in jobrole.exps %}
+                                <div class="exp-unit">
+                                    <input type="checkbox" id="exp-tgl-{{ company.comp.order }}{{ jobrole.role.order }}{{ experience.order }}" class="exp-tgl">
+                                    <label for="exp-tgl-{{ company.comp.order }}{{ jobrole.role.order }}{{ experience.order }}" class="exp-btn-label" ><i class="material-icons">close</i></label>
+                                    <label for="exp-tgl-{{ company.comp.order }}{{ jobrole.role.order }}{{ experience.order }}" class="exp-title-lbl"></label>
 
-{% comment %}                                <input type="checkbox" id="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{% experience.id %}" class="exp-tgl">
-                                <label for="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{{ experience.name }}{% loop.counter %}" class="exp-btn-label" ><i class="material-icons">close</i></label>
-                                <label for="exp-tgl-{{ company.comp.name }}{{ jobrole.role.name }}{{ experience.name }}{% loop.counter %}" class="exp-title-lbl"></label>
-                                {% endcomment %}
 
-                                <div class="exp-label">
-                                    <span class="exp-name">
-                                        {{ experience.name }}
-                                    </span>
-                                    {% if experience.url != "" %}
-                                        <span class="exp-url key-hover">
-                                            <a href="{{ experience.url }}" rel=noreferrer><i class="material-icons">link</i></a>
+                                    <div class="exp-label">
+                                        <span class="exp-name">
+                                            {{ experience.name }}
                                         </span>
-                                    {% endif %}
-                                    {% if experience.achievement != "" %}
-                                        <span class="exp-achiev">
-                                            {{ experience.achievement }}
-                                        </span>
-                                    {% endif %}
-                                    {% if experience.keyword != "" %}
-                                        <span class="exp-keyword font-detail">
-                                            {{ experience.keyword }}
-                                        </span>
-                                    {% endif %}
-                                </div>
-                                <div class="exp-desc-box">
-                                    <p>
-                                        {{ experience.description }}
-                                    </p>
+                                        {% if experience.url != "" %}
+                                            <span class="exp-url key-hover">
+                                                <a href="{{ experience.url }}" rel=noreferrer><i class="material-icons">link</i></a>
+                                            </span>
+                                        {% endif %}
+                                        {% if experience.achievement != "" %}
+                                            <span class="exp-achiev">
+                                                {{ experience.achievement }}
+                                            </span>
+                                        {% endif %}
+                                        {% if experience.keyword != "" %}
+                                            <span class="exp-keyword font-detail">
+                                                {{ experience.keyword }}
+                                            </span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="exp-desc-box">
+                                        <p>
+                                            {{ experience.description }}
+                                        </p>
+                                    </div>
                                 </div>
                             {% endfor %}
                         </div>

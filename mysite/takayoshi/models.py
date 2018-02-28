@@ -7,8 +7,9 @@ class Company(models.Model):
     startdate = models.DateField()
     enddate = models.DateField()
     place = models.CharField(max_length=64)
-    url = models.CharField(max_length=256)
+    url = models.CharField(max_length=256,blank=True)
     description = models.CharField(max_length=1024)
+    order = models.IntegerField(blank=True)
 
     def __str__(self):
         return u'%s' % (self.name)
@@ -20,6 +21,7 @@ class JobeRole(models.Model):
     startdate = models.DateField()
     enddate = models.DateField()
     description = models.CharField(max_length=1024)
+    order = models.IntegerField(blank=True)
 
     def __str__(self):
         return u'%s' % (self.name)
@@ -29,11 +31,12 @@ class Experience(models.Model):
     name = models.CharField(max_length=64)
     role = models.ForeignKey('JobeRole')
     type = models.CharField(max_length=64)
-    incharge = models.CharField(max_length=256)
+    incharge = models.CharField(max_length=256,blank=True)
     achievement = models.CharField(max_length=256,blank=True)
-    keyword = models.CharField(max_length=256)
+    keyword = models.CharField(max_length=256,blank=True)
     url = models.CharField(max_length=256,blank=True)
     description = models.CharField(max_length=1024)
+    order = models.IntegerField(blank=True)
 
     def __str__(self):
         return u'%s' % (self.name)
