@@ -27,8 +27,16 @@
     height:100%;
     overflow:hidden;
 }
-.wind-img{
-    width:100%;
+
+@media all and (orientation: landscape) {
+    .wind-img {
+        width: 100%;
+    }
+}
+@media all and (orientation: portrait) {
+    .wind-img {
+        width: 220%;
+    }
 }
 
 /* Design of main div
@@ -71,6 +79,7 @@
 }
 
 @media all and (orientation: portrait) {
+
     #main-base {
         top:0%;
         height:100%;
