@@ -18,6 +18,7 @@
         <link href="{% static 'css/content.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
         <link href="{% static 'css/style.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
         <link href="{% static 'css/bar.css' %}?now={% now "ymdHis" %}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type='text/javascript'  src="{% static 'js/takayoshi.js' %}?d={% now "ymdHis" %}"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -59,7 +60,8 @@
 
             <div id="area-wind" class="shadow-1">
                 <div id="wind-base">
-                    <img src="{% block windimgurl %}test{% endblock %}" id="wind-img">
+                    {% block windimgurl %}
+                    {% endblock %}
                 </div>
             </div>
 

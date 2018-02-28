@@ -14,7 +14,10 @@
 
 
 {% block windimgurl %}
-    https://s3.amazonaws.com/takayoshi.images/test1.jpg
+    <img src="https://s3.amazonaws.com/takayoshi.images/wx01.jpg" id="wind-img1" class="wind-img">
+    <img src="https://s3.amazonaws.com/takayoshi.images/wx02.jpg" id="wind-img2" class="wind-img">
+    <img src="https://s3.amazonaws.com/takayoshi.images/wx03.jpg" id="wind-img3" class="wind-img">
+
 {% endblock %}
 
 {% block maincontent %}
@@ -80,11 +83,13 @@
                                         </div>
                                     </div>
                                     <div class="exp-desc-box">
-{% comment %}                                        {% if experience.keyword != "" %}
+                                        {% comment %}
+                                        {% if experience.keyword != "" %}
                                             <span class="exp-keyword font-detail">
                                                 {{ experience.keyword }}
                                             </span>
-                                        {% endif %}{% endcomment %}
+                                        {% endif %}
+                                        {% endcomment %}
                                         <p class="font-detail">
                                             {{ experience.description }}
                                         </p>
