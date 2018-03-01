@@ -102,7 +102,7 @@ def qualities(request):
     data = {
         'KasMarketer': sorted(KasMarketer, key=lambda t: t.exp, reverse=True),
         'KasEngineer':  sorted(KasEngineer, key=lambda t: t.exp, reverse=True),
-        'KasCreator': sorted( KasCreator, key=lambda t: t.exp, reverse=True),
+        'KasCreator': sorted(KasCreator, key=lambda t: t.exp, reverse=True),
         'CasMarketer':  sorted(CasMarketer, key=lambda t: t.exp, reverse=True),
         'CasEngineer': sorted(CasEngineer, key=lambda t: t.exp, reverse=True),
         'CasCreator':  sorted(CasCreator, key=lambda t: t.exp, reverse=True),
