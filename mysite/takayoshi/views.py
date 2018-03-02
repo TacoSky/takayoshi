@@ -67,11 +67,6 @@ def qualities(request):
 
 
 def education(request):
-    """education page"""
-    return render(request,'education.html')
-
-
-def experiences(request):
     datacomps = []
 
     """get experiences"""
@@ -85,7 +80,32 @@ def experiences(request):
             tempexps = tempexps.filter(type="Student").order_by('order')
             if tempexps.count() != 0:
                 temproles.append(CtnRoles(role, tempexps))
-        if temproles.count != 0:
+        if temproles.__len__() != 0:
+            datacomps.append(CtnCompanies(comp, temproles))
+
+    data = {
+        'companies': datacomps,
+    }
+
+    """education page"""
+    return render(request,'education.html',data)
+
+
+def experiences(request):
+    datacomps = []
+
+    """get experiences"""
+    companies = Company.objects.all().order_by('order')
+    for comp in companies:
+
+        temproles = []
+        joberoles = JobeRole.objects.all().filter(company=comp).order_by('order')
+        for role in joberoles:
+            tempexps = Experience.objects.all().filter(role=role)
+            tempexps = tempexps.exclude(type="Student").order_by('order')
+            if tempexps.count() != 0:
+                temproles.append(CtnRoles(role, tempexps))
+        if temproles.__len__() != 0:
             datacomps.append(CtnCompanies(comp, temproles))
 
     data = {

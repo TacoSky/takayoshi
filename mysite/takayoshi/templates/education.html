@@ -20,16 +20,86 @@
 {% endblock %}
 
 {% block maincontent %}
+   {% for company in companies %}
+        <div class="cmp-area">
+            <h2 class="cmp-h2 style-h2">{{ company.comp.name }}</h2>
+            <div class="cmp-info">
+                <div class="cmp-label">
+                    <span class="cmp-date font-detail"><p>{{ company.comp.startdate|date:"Y M" }}</p><p> - {{ company.comp.enddate|date:"Y M" }}</p></span>
 
-    <p>
-        Education
-        2017 Apr – 2017 Dec	QQ English
-        Join IT team as intern, learn communicate and work in English.
+                    <span class="cmp-place font-detail">{{ company.comp.place }}</span>
+                    {% if company.comp.url != "" %}
+                        <span class="cmp-url key-hover"><a href="{{ company.comp.url }}" rel=noreferrer><i class="material-icons">link</i></a></span>
+                    {% endif %}
+                </div>
+                <p class="cmp-desc font-detail">
+                    {{ company.comp.description }}
+                </p>
+            </div>
+            <div class="cmp-box">
+                {% for jobrole in company.roles %}
+                    <div class="role-box">
+                        <input type="checkbox" id="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}"  class="role-tgl">
+                        <label for="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}" class="role-btn-label" ><i class="material-icons">close</i></label>
+                        <label for="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}" class="role-title-lbl">
+                            <div class="role-label">
+                                <h3 class="role-h3 style-h3">
+                                    {{ jobrole.role.name }}
+                            </div>
+                        </label>
+                        <div class="exp-box">
+                            <div class="role-info font-detail">
+                                <p class="role-info-p font-detail">{{ jobrole.role.startdate|date:"Y M" }}-{{ jobrole.role.enddate|date:"Y M" }}
+                                    {{ jobrole.role.description }}
+                                </p>
+                            </div>
 
-        2002 Apr - 2007 Mar	National Institute of Technology, Kisarazu College
-                    Dept. of Information and Computer Engineering
-        I learn a wide range like information mathematics, electric circuit,
-        operation system, object oriented programming, system design, network.
-        Got basic knowledge and can cope any kind of IT with studding..
-    </p>
+                            {% for experience in jobrole.exps %}
+                                <div class="exp-unit">
+                                    <input type="checkbox" id="exp-tgl-{{ company.comp.order }}{{ jobrole.role.order }}{{ experience.order }}" class="exp-tgl">
+                                    <label for="exp-tgl-{{ company.comp.order }}{{ jobrole.role.order }}{{ experience.order }}" class="exp-btn-label" ><i class="material-icons">close</i></label>
+                                    <label for="exp-tgl-{{ company.comp.order }}{{ jobrole.role.order }}{{ experience.order }}" class="exp-title-lbl"></label>
+
+
+                                    <div class="exp-label">
+                                        <div class="exp-label-top">
+                                            <span class="exp-name">
+                                                {{ experience.name }}
+                                            </span>
+                                            {% if experience.url != "" %}
+                                                <span class="exp-url key-hover">
+                                                    <a href="{{ experience.url }}" rel=noreferrer><i class="material-icons">link</i></a>
+                                                </span>
+                                            {% endif %}
+                                        </div>
+
+                                        <div class="exp-label-bottom">
+                                            {% if experience.achievement != "" %}
+                                                <span class="exp-achiev">
+                                                    {{ experience.achievement }}
+                                                </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="exp-desc-box">
+                                        {% comment %}
+                                        {% if experience.keyword != "" %}
+                                            <span class="exp-keyword font-detail">
+                                                {{ experience.keyword }}
+                                            </span>
+                                        {% endif %}
+                                        {% endcomment %}
+                                        <p class="font-detail">
+                                            {{ experience.description }}
+                                        </p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+
 {% endblock %}
