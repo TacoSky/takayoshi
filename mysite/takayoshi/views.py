@@ -37,23 +37,25 @@ def qualities(request):
 
     tempexps = Experience.objects.all().order_by('order')
     for exp in tempexps:
-        for key in exp.keyword.split(","):
-            flag = False
-            for valu in keywords:
-                if key == valu.key:
-                    valu.exp = valu.exp + 1
-                    flag = True
-            if flag is False:
-                keywords.append(CtnKeyword(key, 1))
+        if exp.keyword != "":
+            for key in exp.keyword.split(","):
+                flag = False
+                for valu in keywords:
+                    if key == valu.key:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    keywords.append(CtnKeyword(key, 1))
 
-        for crg in exp.incharge.split(","):
-            flag = False
-            for valu in inchargs:
-                if crg == valu.inc:
-                    valu.exp = valu.exp + 1
-                    flag = True
-            if flag is False:
-                inchargs.append(CtnCnCharge(crg, 1))
+        if exp.incharge != "":
+            for crg in exp.incharge.split(","):
+                flag = False
+                for valu in inchargs:
+                    if crg == valu.inc:
+                        valu.exp = valu.exp + 1
+                        flag = True
+                if flag is False:
+                    inchargs.append(CtnCnCharge(crg, 1))
 
     data = {
         'keywords': sorted(sorted(keywords, key=lambda t: t.key), key=lambda t: t.exp, reverse=True),
@@ -79,9 +81,12 @@ def experiences(request):
         temproles = []
         joberoles = JobeRole.objects.all().filter(company=comp).order_by('order')
         for role in joberoles:
-            tempexps = Experience.objects.all().filter(role=role).order_by('order')
-            temproles.append(CtnRoles(role, tempexps))
-        datacomps.append(CtnCompanies(comp, temproles))
+            tempexps = Experience.objects.all().filter(role=role)
+            tempexps = tempexps.filter(type="Student").order_by('order')
+            if tempexps.count() != 0:
+                temproles.append(CtnRoles(role, tempexps))
+        if temproles.count != 0:
+            datacomps.append(CtnCompanies(comp, temproles))
 
     data = {
         'companies': datacomps,

@@ -35,7 +35,8 @@
 }
 @media all and (orientation: portrait) {
     .wind-img {
-        width: 220%;
+        width: 200%;
+        margin-left:-50%;
     }
 }
 
