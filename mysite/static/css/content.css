@@ -267,10 +267,10 @@
     content: "";
     z-index:4;
     position:absolute;
-    top:47.5%;
+    top:46%;
     left:0;
     width:100%;
-    height:5%;
+    height:8%;
     background: #3d3e3d; /* Old browsers */
     background: -moz-linear-gradient(left, #3d3e3d 0%, #fdffff 70%, #3d3e3d 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #3d3e3d 0%, #fdffff 70%,#3d3e3d 100%); /* Chrome10-25,Safari5.1-6 */

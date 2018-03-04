@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Classification, Experience, JobeRole, Company
+from .models import Classification, Experience, JobeRole, Company, Portfolio
 
 # Create your views here.
 
@@ -114,8 +114,12 @@ def experiences(request):
 
 
 def portfolio(request):
-    """portfolio page"""
-    return render(request,'portfolio.html')
+    portfolios = Portfolio.objects.all().order_by('order')
+
+    data = {
+        'portfolios': portfolios,
+    }
+    return render(request,'portfolio.html', data)
 
 
 
