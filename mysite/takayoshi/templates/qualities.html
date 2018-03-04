@@ -21,30 +21,144 @@
 
 {% block maincontent %}
 
-    <h2 class="style-marketer-h2">As Marketer</h2>
-    <h3 class="style-h3">I have knowledge of</h3>
-    {% for keyword in keywords %}
-        <p>
-            {{ keyword.key }}:{{ keyword.exp }}
-        </p>
-    {% endfor %}
-    <h3 class="style-h3">I have experience of</h3>
-    {% for incharge in inchargs %}
-        <p>
-            {{ incharge.inc }}:{{ incharge.exp }}
-        </p>
-    {% endfor %}
-{% comment %}
 
-    <h2 class="style-marketer-h2">Marketer</h2>
-    <h3 class="style-h3">Skill and level</h3>
-    <h3 class="style-h3">Responsible for</h3>
-    <h2 class="style-Engineer-h2">Engineer</h2>
-    <h3 class="style-h3">Skill and level</h3>
-    <h3 class="style-h3">Responsible for</h3>
-    <h2 class="style-Creator-h2">Creator</h2>
-    <h3 class="style-h3">Skill and level</h3>
-    <h3 class="style-h3">Responsible for</h3>
-{% endcomment %}
+
+    <div class="area-classification">
+        <h2 class="style-Creator-h">Qualities As Creator</h2>
+        <p class="cls-desc">test test test test test test test test test test test test test test test test test test test test </p>
+
+        <div class="cls-detail">
+
+            <input type="checkbox" id="cls-tgl-Creator"  class="cls-tgl">
+            <label for="cls-tgl-Creator" class="cls-btn-label" ><i class="material-icons">close</i></label>
+            <label for="cls-tgl-Creator" class="cls-title-lbl">
+                <div class="cls-label">
+                    <h3 class="style-Creator-h style-h3">
+                        I'm skilled of ...
+                    </h3>
+                </div>
+            </label>
+
+            <div class="cls-box">
+                {% for keyword in keywords %}
+                    {% if keyword.cls == "Creator" %}
+                        <div class="kwd-box">
+                            <span class="kwd-name">
+                                    {{ keyword.key }}
+                            </span>
+                            <span class="kwd-space"></span>
+                            <span class="kwd-exp style-Creator">
+                                {% if keyword.exp <= 1 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp <= 3 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp > 3 %}
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% endif %}
+                            </span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="area-classification">
+        <h2 class="style-Engineer-h">Qualities As Engineer</h2>
+        <p class="cls-desc">test test test test test test test test test test test test test test test test test test test test </p>
+        <div class="cls-detail">
+
+            <input type="checkbox" id="cls-tgl-Engineer"  class="cls-tgl">
+            <label for="cls-tgl-Engineer" class="cls-btn-label" ><i class="material-icons">close</i></label>
+            <label for="cls-tgl-Engineer" class="cls-title-lbl">
+                <div class="cls-label">
+                    <h3 class="style-Engineer-h style-h3">
+                        I'm skilled of ...
+                    </h3>
+                </div>
+            </label>
+
+            <div class="cls-box">
+                {% for keyword in keywords %}
+                    {% if keyword.cls == "Engineer" %}
+                        <div class="kwd-box">
+                            <span class="kwd-name">
+                                    {{ keyword.key }}
+                            </span>
+                            <span class="kwd-space"></span>
+                            <span class="kwd-exp style-Engineer">
+                                {% if keyword.exp <= 1 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp <= 3 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp > 3 %}
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% endif %}
+                            </span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="area-classification">
+        <h2 class="style-Marketer-h">Qualities As Marketer</h2>
+        <p class="cls-desc">test test test test test test test test test test test test test test test test test test test test </p>
+
+        <div class="cls-detail">
+
+            <input type="checkbox" id="cls-tgl-Marketer"  class="cls-tgl">
+            <label for="cls-tgl-Marketer" class="cls-btn-label" ><i class="material-icons">close</i></label>
+            <label for="cls-tgl-Marketer" class="cls-title-lbl">
+                <div class="cls-label">
+                    <h3 class="style-Marketer-h style-h3">
+                        I'm skilled of ...
+                    </h3>
+                </div>
+            </label>
+
+            <div class="cls-box">
+                {% for keyword in keywords %}
+                    {% if keyword.cls == "Marketer" %}
+                        <div class="kwd-box">
+                            <span class="kwd-name">
+                                    {{ keyword.key }}
+                            </span>
+                            <span class="kwd-space"></span>
+                            <span class="kwd-exp style-Marketer">
+                                {% if keyword.exp <= 1 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp <= 3 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp > 3 %}
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% endif %}
+                            </span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

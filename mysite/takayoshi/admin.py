@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Company,JobeRole,Experience
+from .models import Company,JobeRole,Experience,Classification
 
 
 class CompanyAdmin(admin.ModelAdmin):
@@ -20,6 +20,11 @@ class ExperienceAdmin(admin.ModelAdmin):
     ordering = ('order',)
 
 
+class ClassificationAdmin(admin.ModelAdmin):
+    list_display = ('name', 'type')
+    ordering = ('name',)
+
 admin.site.register(Company, CompanyAdmin)
 admin.site.register(JobeRole, JobRoleAdmin)
 admin.site.register(Experience, ExperienceAdmin)
+admin.site.register(Classification, ClassificationAdmin)

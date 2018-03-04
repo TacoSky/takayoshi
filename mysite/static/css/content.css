@@ -134,21 +134,21 @@
 
 
 
-.role-tgl, .exp-tgl{
+.role-tgl, .exp-tgl, .cls-tgl{
     display: none;
 }
 
-.role-label, .exp-label{
+.role-label, .exp-label, .cls-label{
     display: inline-block;
 }
 
-.role-btn-label>i, .exp-btn-label>i {
+.role-btn-label>i, .exp-btn-label>i, .cls-btn-label>i  {
     font-size:0.85em;
 }
 .role-btn-label{
     color:#223a64;
 }
-.role-btn-label, .exp-btn-label{
+.role-btn-label, .exp-btn-label, .cls-btn-label{
 
     display: inline-block;
     z-index:8;
@@ -176,7 +176,8 @@
 }
 
 .role-tgl:checked ~ .role-btn-label,
-.exp-tgl:checked ~ .exp-btn-label{
+.exp-tgl:checked ~ .exp-btn-label,
+.cls-tgl:checked ~ .cls-btn-label{
     -webkit-filter:
             drop-shadow(-1px 1px 0px rgb(26, 32, 42));
     -moz-filter:
@@ -188,19 +189,16 @@
     transform: rotate( 0deg );
 }
 
-.role-btn>i, .exp-btn-label>i{
+.role-btn>i, .exp-btn-label>i, .cls-btn-label>i, .kwd-exp>i{
     font-size: 0.85em;
 }
 
-.exp-box{
+.exp-box,.cls-box{
     margin-left:0.6em;
     height:0;
     overflow: hidden;
     -webkit-transition: -webkit-transform 0.8s;
     transition: transform 0.8s;
-}
-.role-tgl:checked ~ .exp-box{
-    height:auto;
 }
 
 .role-info{
@@ -215,7 +213,7 @@
     margin-bottom:0.3em;
 }
 
-.exp-label-top,.exp-label-bottom{
+.exp-label-top,.exp-label-bottom,.kwd-box{
     display: -webkit-flex; /* Safari */
     display: flex;
     -webkit-justify-content: space-between; /* Safari */
@@ -231,14 +229,15 @@
     -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
 }
+
 .role-tgl:checked ~ .exp-box,
-.exp-tgl:checked ~ .exp-desc-box{
+.exp-tgl:checked ~ .exp-desc-box,
+.cls-tgl:checked ~ .cls-box{
     height:auto;
 }
-.exp-name{
+.exp-name,.kwd-name{
     font-size: 1em;
     line-height:1.4em;
-
 }
 .exp-achiev{
     font-weight: bold;
@@ -251,4 +250,30 @@
 }
 .exp-unit{
     margin-bottom: 0.6em;
+}
+.kwd-box{
+    margin: 0.6em;
+}
+.kwd-space{
+    position:relative;
+    width:3em;
+    height:1em;
+    -webkit-flex-grow: 5;
+    -webkit-flex-shrink: 5;
+    flex-grow: 5;
+    flex-shrink: 5;
+}
+.kwd-space::after{
+    content: "";
+    z-index:4;
+    position:absolute;
+    top:47.5%;
+    left:0;
+    width:100%;
+    height:5%;
+    background: #3d3e3d; /* Old browsers */
+    background: -moz-linear-gradient(left, #3d3e3d 0%, #fdffff 70%, #3d3e3d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #3d3e3d 0%, #fdffff 70%,#3d3e3d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #3d3e3d 0%, #fdffff 70%,#3d3e3d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); /* IE6-9 */
 }

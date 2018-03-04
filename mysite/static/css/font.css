@@ -73,7 +73,7 @@ a{
         font-size: 1.4em;
     }
     h3,.main-a{
-        font-size: 1.1em;
+        font-size: 1.0em;
     }
 }
 @media all and (min-width:401px) and (max-width:1000px){
@@ -87,7 +87,7 @@ a{
         font-size: 1.5em;
     }
     h3,.main-a{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 
@@ -103,7 +103,7 @@ a{
         font-size: 1.6em;
     }
     h3,.main-a{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 }
 h1{
@@ -148,7 +148,7 @@ p{
     }
     100% {
         transform: translateY(-0.2em);
-        font-size:1.1em;
+        font-size:1.05em;
     }
 }
 
@@ -159,7 +159,7 @@ p{
     }
     100% {
         -webkit-transform: translateY(-0.2em);
-        font-size:1.1em;
+        font-size:1.05em;
     }
 }
 

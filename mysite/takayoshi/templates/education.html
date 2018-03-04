@@ -22,7 +22,7 @@
 {% block maincontent %}
    {% for company in companies %}
         <div class="cmp-area">
-            <h2 class="cmp-h2 style-h2">{{ company.comp.name }}</h2>
+            <h2 class="cmp-h2 style-h">{{ company.comp.name }}</h2>
             <div class="cmp-info">
                 <div class="cmp-label">
                     <span class="cmp-date font-detail"><p>{{ company.comp.startdate|date:"Y M" }}</p><p> - {{ company.comp.enddate|date:"Y M" }}</p></span>
@@ -43,7 +43,7 @@
                         <label for="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}" class="role-btn-label" ><i class="material-icons">close</i></label>
                         <label for="role-tgl-{{ company.comp.order }}{{ jobrole.role.order }}" class="role-title-lbl">
                             <div class="role-label">
-                                <h3 class="role-h3 style-h3">
+                                <h3 class="role-h3 style-h style-h3">
                                     {{ jobrole.role.name }}
                             </div>
                         </label>

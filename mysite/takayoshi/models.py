@@ -12,9 +12,9 @@ class Company(models.Model):
     order = models.IntegerField(blank=True)
 
     def __str__(self):
-        return u'%s' % (self.name)
+        return u'%s' % self.name
 
-'''Typo JobRole'''
+
 class JobeRole(models.Model):
     name = models.CharField(max_length=64)
     company = models.ForeignKey('Company')
@@ -24,7 +24,7 @@ class JobeRole(models.Model):
     order = models.IntegerField(blank=True)
 
     def __str__(self):
-        return u'%s' % (self.name)
+        return u'%s' % self.name
 
 
 class Experience(models.Model):
@@ -39,7 +39,17 @@ class Experience(models.Model):
     order = models.IntegerField(blank=True)
 
     def __str__(self):
-        return u'%s' % (self.name)
+        return u'%s' % self.name
+
+
+class Classification(models.Model):
+    name = models.CharField(max_length=64)
+    type = models.CharField(max_length=64)
+
+    def __str__(self):
+        return u'%s' % self.name
+
+
 
 
 

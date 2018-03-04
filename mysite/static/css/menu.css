@@ -55,9 +55,9 @@
     #area-menu {
         position: absolute;
         top: 6.25%;
-        left:6.25%;
+        left:5%;
         height:87.5%;
-        width:12.5%;
+        width:15.5%;
     }
     #menu-hide-cover{
         display: none;
@@ -75,7 +75,7 @@
         margin-bottom:8%;
     }
     #menu-logo-img{
-        width:100%;
+        width:80%;
     }
     #menu-base{
         display:none;
@@ -177,7 +177,7 @@
         z-index: 12;
     }
     #menu-logo-img{
-        margin-top:3%;
+        margin-top:15%;
         width:30%;
     }
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Company, JobeRole, Experience
+from .models import Classification, Experience, JobeRole, Company
 
 # Create your views here.
 
@@ -16,14 +16,11 @@ class CtnCompanies:
         self.roles = arvroles
 
 class CtnKeyword:
-    def __init__(self, keyword, experience):
+    def __init__(self, keyword, experience, classific):
         self.key = keyword
         self.exp = experience
+        self.cls = classific
 
-class CtnCnCharge:
-    def __init__(self, incharge, experience):
-        self.inc = incharge
-        self.exp = experience
 
 
 def index(request):
@@ -33,9 +30,9 @@ def index(request):
 
 def qualities(request):
     keywords = []
-    inchargs = []
 
     tempexps = Experience.objects.all().order_by('order')
+    cl = Classification.objects.all()
     for exp in tempexps:
         if exp.keyword != "":
             for key in exp.keyword.split(","):
@@ -45,21 +42,20 @@ def qualities(request):
                         valu.exp = valu.exp + 1
                         flag = True
                 if flag is False:
-                    keywords.append(CtnKeyword(key, 1))
+                    keywords.append(CtnKeyword(key, 1, cl.filter(name=key)[0].type))
 
         if exp.incharge != "":
             for crg in exp.incharge.split(","):
                 flag = False
-                for valu in inchargs:
-                    if crg == valu.inc:
+                for valu in keywords:
+                    if crg == valu.key:
                         valu.exp = valu.exp + 1
                         flag = True
                 if flag is False:
-                    inchargs.append(CtnCnCharge(crg, 1))
+                    keywords.append(CtnKeyword(crg, 1, cl.filter(name=crg)[0].type))
 
     data = {
         'keywords': sorted(sorted(keywords, key=lambda t: t.key), key=lambda t: t.exp, reverse=True),
-        'inchargs': sorted(sorted(inchargs, key=lambda t: t.inc), key=lambda t: t.exp, reverse=True),
     }
     """qualities page"""
     return render(request,'qualities.html', data)
