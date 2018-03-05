@@ -25,17 +25,21 @@
         <div class="ptf-box">
             <input type="checkbox" id="ptf-tgl-{{ portfolio.order }}"  class="ptf-tgl">
             <img class="ptf-img" src="https://s3.amazonaws.com/takayoshi.images/{{ portfolio.image }}">
-            {% if portfolio.portfolio.achievement != "" %}
-                <div class="ptf-achive style-tdot-trans"><span>{{ portfolio.achievement }}</span></div>
-            {% endif %}
-            <div class="ptf-label-bar style-tdot-trans">
+
+            <div class="ptf-label-bar grad-VD">
                 <label for="ptf-tgl-{{ portfolio.order }}" class="ptf-title-lbl">
                     <span class="ptf-company">{{ portfolio.company }}</span>
                     <h3 class="ptf-name">{{ portfolio.name }}</h3>
+                    {% if portfolio.portfolio.achievement != "" %}
+                        <span class="ptf-achive">{{ portfolio.achievement }}</span>
+                    {% endif %}
+                    {% if portfolio.portfolio.description != "" %}
+                        <span class="ptf-desc">{{ portfolio.description }}</span>
+                    {% endif %}
                 </label>
             </div>
             {% comment %}<label for="ptf-tgl-{{ portfolio.order }}" class="ptf-btn-label" ><i class="material-icons">close</i></label>{% endcomment %}
-                {% if portfolio.url != "" %}
+            {% if portfolio.url != "" %}
                 <span class="ptf-url key-hover">
                     <a href="{{ portfolio.url }}" rel=noreferrer><i class="material-icons">link</i></a>
                 </span>

@@ -90,8 +90,8 @@
     }
     /* Floating Action Button */
     .button-FAB{
-        width:5vw;
-        height:5vw;
+        width:3.5vw;
+        height:3.5vw;
     }
 
     #menu-link{
@@ -238,13 +238,13 @@
         transition: all  .7s;
     }
     #menu-view-btn1{
-        top: 90%;
+        bottom: 10%;
     }
     #menu-view-btn2{
-        top: 91.25%;
+        bottom: 8.75%;
     }
     #menu-view-btn3{
-        top: 92.5%;
+        bottom: 7.5%;
     }
     #menu-tgl:checked ~ #menu-view-btn1 {
         -webkit-transform: translateY(1.25vh) rotate(-45deg);

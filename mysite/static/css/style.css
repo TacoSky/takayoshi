@@ -113,22 +113,29 @@
     background: -moz-linear-gradient(left, #cb5f00 0%, #ffb16d 70%, #cb5f00 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #cb5f00 0%,#ffb16d 70%,#cb5f00 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #cb5f00 0%,#ffb16d 70%,#cb5f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb5f00', endColorstr='#cb5f00',GradientType=1 ); /* IE6-9 */
 }
 .grad-VO{ /*VVV Blue*/
     background: #cb5f00; /* Old browsers */
     background: -moz-linear-gradient(top, #cb5f00 0%, #ffb16d 30%, #cb5f00 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #cb5f00 0%,#ffb16d 30%,#cb5f00 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #cb5f00 0%,#ffb16d 30%,#cb5f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=0 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb5f00', endColorstr='#cb5f00',GradientType=0 ); /* IE6-9 */
+}
+.grad-VD{
+    background: rgb(27, 43, 71); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(27, 43, 71, 0) 0%, rgba(27, 43, 71, 1) 60%, rgba(27, 43, 71, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(27, 43, 71, 0) 0%, rgba(27, 43, 71, 1) 60%, rgba(27, 43, 71, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(top, rgba(27, 43, 71, 0) 0%, rgba(27, 43, 71, 1) 60%, rgba(27, 43, 71, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=rgba(27, 43, 71, 0), endColorstr=rgba(27, 43, 71, 1),GradientType=0 ); /* IE6-9 */
 }
 
 @media all and (orientation: landscape) {
     .shadow-1{
-        filter: drop-shadow(-2px 3px 1px rgba(27,43,71,0.8));
+        filter: drop-shadow(-2px 3px 1px rgba(27, 43, 71, 0.8));
     }
     .shadow-2{
-        filter: drop-shadow(-3px 4px 2px rgba(27,43,71,0.5));
+        filter: drop-shadow(-3px 4px 2px rgba(27,43,71,0.8));
     }
 }
 
