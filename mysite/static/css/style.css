@@ -8,6 +8,13 @@
     background-color:#edf0f2;
     background-size:16px 16px;
 }
+.style-tdot-trans{
+    background:
+        radial-gradient(rgba(250, 253, 255, 0.7) 2%, transparent 10%) 0 0,
+        radial-gradient(rgba(250, 253, 255, 0.7) 2%, transparent 10%) 8px 8px;
+    background-color: rgba(237, 240, 242, 0.8);
+    background-size:16px 16px;
+}
 .style-h1{
     color: #ffb16d;
     -webkit-filter:

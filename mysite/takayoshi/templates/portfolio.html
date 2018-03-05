@@ -19,22 +19,28 @@
 {% endblock %}
 
 {% block maincontent %}
-
-    <p>
-        Portfolio List
-    </p>
-
-    <p></p>
-
-    <p>
-        My administration will decisively carry out Work Style Reform.
-        We will make it possible for people who have to attend to various other responsibilities, such as raising their children or providing nursing care for elderly relatives, to work with a sense of ambition. By implementing fundamental reforms, we will create a more flexible labor system that allows all people to make the most of their abilities. This will be a major reform, the likes of which have not been seen in 70 years since the establishment of the Labor Standards Law.
-        For many years, the concept of equal pay for equal work was merely debated, again and again. At long last, we are about to make this a reality. We will prohibit employment structures that create irrational gaps in the treatment of workers and remove the words “irregular work” from our country’s vocabulary.
-        In addition, my administration will expand the basic income tax exemption, while at the same time revising the exemption system, which is limited to certain specific lifestyles, such as that of a full-time, white-collar worker. By doing so, we will reform the tax system so as to have one that is not restricted by people’s work styles.
-        Furthermore, we will eradicate the practice of working long hours that has permeated our society. For the first time in history, through an agreement reached between labor and the business community, we will limit the maximum hours of overtime work permitted, with penalties attached, by which the exceptions of the Article 36 Agreement of the Labor Standards Act cannot be exempted. Moreover, in highly specialized professions, we will make it possible to choose a system in which one is evaluated not by the number of hours worked, but by one’s results.
-        “If we develop new ways of working, we will be able to compete on a par with major corporations.”
-        These words were said to me by a young startup manager. By actively introducing teleworking arrangements and three-day working weeks, the company has succeeded in recruiting talented workers who left their jobs at major corporations due to various family circumstances.
-        Work Style Reforms are not merely a social policy. They are exactly our growth strategy. If we are able to ensure work-life balance, everyone will be able to lead fulfilling lives and make the most of their abilities, and we surely can overcome the challenge of the aging society and decreasing birthrate.
-        Honorable members of the Diet, let us work together to reform work styles, which will pave the way for a new era.
-</p>
+    <h2 class="style-h">Portfolio Gallery</h2>
+    <div class="ptf-area">
+    {% for portfolio in portfolios %}
+        <div class="ptf-box">
+            <input type="checkbox" id="ptf-tgl-{{ portfolio.order }}"  class="ptf-tgl">
+            <img class="ptf-img" src="https://s3.amazonaws.com/takayoshi.images/{{ portfolio.image }}">
+            {% if portfolio.portfolio.achievement != "" %}
+                <div class="ptf-achive style-tdot-trans"><span>{{ portfolio.achievement }}</span></div>
+            {% endif %}
+            <div class="ptf-label-bar style-tdot-trans">
+                <label for="ptf-tgl-{{ portfolio.order }}" class="ptf-title-lbl">
+                    <span class="ptf-company">{{ portfolio.company }}</span>
+                    <h3 class="ptf-name">{{ portfolio.name }}</h3>
+                </label>
+            </div>
+            {% comment %}<label for="ptf-tgl-{{ portfolio.order }}" class="ptf-btn-label" ><i class="material-icons">close</i></label>{% endcomment %}
+                {% if portfolio.url != "" %}
+                <span class="ptf-url key-hover">
+                    <a href="{{ portfolio.url }}" rel=noreferrer><i class="material-icons">link</i></a>
+                </span>
+            {% endif %}
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}
