@@ -216,6 +216,13 @@
     -webkit-align-items: center; /* Safari */
     align-items:         center;
 }
+,.exp-label-middle{
+     height:auto;
+     display: -webkit-flex; /* Safari */
+     display: flex;
+     -webkit-align-items: flex-start; /* Safari */
+     align-items:         flex-start;
+ }
 .exp-desc-box{
     width:85%;
     height:0;
@@ -231,14 +238,14 @@
     height:auto;
 }
 .exp-name,.kwd-name{
+    color: rgba(14, 16, 33, 0.9);
     font-size: 1em;
     line-height:1.4em;
 }
 .exp-achiev{
-    font-weight: bold;
-    color:#cb5f00;
-    text-shadow: 0px 0px 0.1vh #ffb16d;
-    font-size: 0.7em;
+    color: rgb(244, 113, 0);
+    text-shadow: -0.06em 0.06em 0.05em rgba(42, 18, 0, 0.9);
+    font-size: 0.8em;
     line-height:1.4em;
     margin:0;
     padding:0;

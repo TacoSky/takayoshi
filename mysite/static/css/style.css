@@ -12,7 +12,7 @@
     background:
         radial-gradient(rgba(206, 229, 243, 1) 2%, transparent 10%) 0 0,
         radial-gradient(rgba(206, 229, 243, 1) 2%, transparent 10%) 8px 8px;
-    background-color: rgba(237, 240, 242, 0.6);
+    background-color: rgba(237, 240, 242, 0.65);
     background-size:16px 16px;
 }
 .style-h1{
@@ -157,6 +157,9 @@
 .style-Marketer {
     color: #126969;
 }
+.style-Marketer-bk {
+    background-color: rgba(9, 33, 33, 0.6);
+}
 
 .style-Marketer-h{
     color: #126969;
@@ -184,6 +187,9 @@
 }
 .style-Engineer,.style-Engineer>i{
     color: #695687;
+}
+.style-Engineer-bk {
+    background-color: rgba(52, 43, 70, 0.68);
 }
 .style-Engineer-h{
     color: #695687;
@@ -213,6 +219,10 @@
 
 .style-Creator{
     color: #ad4c48;
+}
+
+.style-Creator-bk{
+    background-color: rgba(42, 21, 21, 0.63);
 }
 .style-Creator-h{
     color: #ad4c48;

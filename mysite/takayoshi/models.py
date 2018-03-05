@@ -42,7 +42,9 @@ class Experience(models.Model):
         return u'%s' % self.name
 
     def keywords(self):
-        return self.keyword.split(",").extend(self.incharge.split(","))
+        keywords = self.keyword.split(",")
+        incharges = self.incharge.split(",")
+        return keywords + incharges
 
 
 class Classification(models.Model):

@@ -4,6 +4,13 @@ from .models import Classification, Experience, JobeRole, Company, Portfolio
 
 # Create your views here.
 
+
+class CtnExps:
+    def __init__(self, arvexp, arvkey):
+        self.exp = arvexp
+        self.key = arvkey
+
+
 class CtnRoles:
     def __init__(self, arvrole, arvexps):
         self.role = arvrole
@@ -14,6 +21,7 @@ class CtnCompanies:
     def __init__(self, arvcomp, arvroles):
         self.comp = arvcomp
         self.roles = arvroles
+
 
 class CtnKeyword:
     def __init__(self, keyword, experience, classific):
@@ -72,10 +80,12 @@ def education(request):
         temproles = []
         joberoles = JobeRole.objects.all().filter(company=comp).order_by('order')
         for role in joberoles:
-            tempexps = Experience.objects.all().filter(role=role)
-            tempexps = tempexps.filter(type="Student").order_by('order')
-            if tempexps.count() != 0:
-                temproles.append(CtnRoles(role, tempexps))
+            tempexps = Experience.objects.all().filter(role=role).filter(type="Student").order_by('order')
+            expctns = []
+            for exp in tempexps:
+                expctns.append(CtnExps(exp, exp.keywords()))
+            if expctns.__len__() != 0:
+                temproles.append(CtnRoles(role, expctns))
         if temproles.__len__() != 0:
             datacomps.append(CtnCompanies(comp, temproles))
 
@@ -92,15 +102,22 @@ def experiences(request):
 
     """get experiences"""
     companies = Company.objects.all().order_by('order')
+    cl = Classification.objects.all()
     for comp in companies:
 
         temproles = []
         joberoles = JobeRole.objects.all().filter(company=comp).order_by('order')
         for role in joberoles:
-            tempexps = Experience.objects.all().filter(role=role)
-            tempexps = tempexps.exclude(type="Student").order_by('order')
-            if tempexps.count() != 0:
-                temproles.append(CtnRoles(role, tempexps))
+            tempexps = Experience.objects.all().filter(role=role).exclude(type="Student").order_by('order')
+            expctns = []
+            for exp in tempexps:
+                keywords = []
+                for key in exp.keywords():
+                    if key != "":
+                        keywords.append(CtnKeyword(key, 1, cl.filter(name=key)[0].type))
+                expctns.append(CtnExps(exp, sorted(keywords, key=lambda t: t.cls)))
+            if expctns.__len__() != 0:
+                temproles.append(CtnRoles(role, expctns))
         if temproles.__len__() != 0:
             datacomps.append(CtnCompanies(comp, temproles))
 
