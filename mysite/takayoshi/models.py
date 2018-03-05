@@ -41,6 +41,9 @@ class Experience(models.Model):
     def __str__(self):
         return u'%s' % self.name
 
+    def keywords(self):
+        return self.keyword.split(",").extend(self.incharge.split(","))
+
 
 class Classification(models.Model):
     name = models.CharField(max_length=64)

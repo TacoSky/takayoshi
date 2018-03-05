@@ -13,7 +13,7 @@ h1 {
     font-weight: bold;
     text-align: left;
     display: inline-block;
-    transform: rotate( -5deg )
+    transform: rotate( -5deg );
 }
 h2{
     font-weight: normal;

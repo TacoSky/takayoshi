@@ -77,6 +77,16 @@
                                         </div>
 
                                         <div class="exp-label-bottom">
+
+{% comment %}                                            {% if experience.keywords.count != 0 %}
+                                                <span class="exp-keyword ">
+                                                    key {{ experience.keywords.count }}
+                                                    {% for key in experience.keywords %}
+                                                        words
+                                                        {{ key.str }}
+                                                    {% endfor %}
+                                                </span>
+                                            {% endif %}{% endcomment %}
                                             {% if experience.achievement != "" %}
                                                 <span class="exp-achiev">
                                                     {{ experience.achievement }}
@@ -85,13 +95,9 @@
                                         </div>
                                     </div>
                                     <div class="exp-desc-box">
-                                        {% comment %}
-                                        {% if experience.keyword != "" %}
-                                            <span class="exp-keyword font-detail">
-                                                {{ experience.keyword }}
-                                            </span>
-                                        {% endif %}
-                                        {% endcomment %}
+
+
+
                                         <p class="font-detail">
                                             {{ experience.description }}
                                         </p>

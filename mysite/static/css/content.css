@@ -160,7 +160,7 @@
     -o-filter:
             drop-shadow(1.5px 0px 0px rgb(26, 32, 42));
     filter:
-            drop-shadow(0px -1.5px 0px rgb(26, 32, 42));
+            drop-shadow(1.5px 0px 0px rgb(26, 32, 42));
 
 }
 
@@ -285,8 +285,8 @@
     align-items:         center;
 }
 .ptf-box{
-    margin:0.2em;
-    overflow:auto;
+    margin:0.3em;
+    overflow:hidden;
     position:relative;
     filter: drop-shadow(-2px 3px 1px rgba(27,43,71,0.8));
 }
@@ -300,23 +300,6 @@
     width:100%;
     height:auto;
 }
-/*.ptf-box{
-    display: inline-block;
-    position: relative;
-    height:auto;
-    margin:0.2em;
-    filter: drop-shadow(-2px 3px 1px rgba(27,43,71,0.8));
-}
-.ptf-img{
-    opacity:1;
-    background-color: #edf0f2;
-    object-fit: scale-down;
-    -webkit-transition: -webkit-transform 1.2s;
-    transition: 1.2s;
-    top: 0;
-    border-radius: 0.2em;
-}*/
-
 .ptf-achive, .ptf-company, .ptf-name{
     margin:0.2em;
     letter-spacing: 0.05em;
