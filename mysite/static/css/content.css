@@ -327,7 +327,7 @@
 @media all and (orientation: landscape) {
     .ptf-box {
         width: 30%;
-        height: 60%;
+        height: 65%;
     }
 
 
@@ -347,18 +347,10 @@
 }
 
 @media all and (orientation: portrait) {
-/*    .ptf-img {
-        width: 35vmin;
-        height: 35vmin;
-    }
-    .cls-tgl:checked ~ .ptf-img {
-        width: 70vmin;
-        height: auto;
-    }*/
 
     .ptf-box {
         width: 45%;
-        height: 30%;
+        height: 35%;
     }
     .ptf-achive{
         font-size: 0.7em;
