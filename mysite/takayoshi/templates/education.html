@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block maincontent %}
-   {% for company in companies %}
+    {% for company in companies %}
         <div class="cmp-area">
             <h2 class="cmp-h2 style-h">{{ company.comp.name }}</h2>
             <div class="cmp-info">
@@ -49,9 +49,8 @@
                         </label>
                         <div class="exp-box">
                             <div class="role-info font-detail">
-                                <p class="role-info-p font-detail">{{ jobrole.role.startdate|date:"Y M" }}-{{ jobrole.role.enddate|date:"Y M" }}
-                                    {{ jobrole.role.description }}
-                                </p>
+                                <p class="role-info-p font-detail">{{ jobrole.role.startdate|date:"Y M" }}-{{ jobrole.role.enddate|date:"Y M" }}</p>
+                                <p class="role-info-p font-detail">{{ jobrole.role.description }}</p>
                             </div>
 
                             {% for experience in jobrole.exps %}
@@ -73,12 +72,25 @@
                                             {% endif %}
                                         </div>
 
-                                        <div class="exp-label-bottom">
+                                        <div class="exp-label-middle">
                                             {% if experience.exp.achievement != "" %}
                                                 <span class="exp-achiev">
                                                     {{ experience.exp.achievement }}
                                                 </span>
                                             {% endif %}
+                                            {% for kw in experience.key %}
+                                                {%  if kw.key != "" %}
+                                                    {%  if kw.cls == "Engineer" %}
+                                                        <span class="exp-key-elm style-Engineer-bk">{{ kw.key }}</span>
+                                                    {%  elif kw.cls == "Marketer" %}
+                                                        <span class="exp-key-elm style-Marketer-bk">{{ kw.key }}</span>
+                                                    {%  elif kw.cls == "Creator" %}
+                                                        <span class="exp-key-elm style-Creator-bk">{{ kw.key }}</span>
+                                                    {% else %}
+                                                        <span class="exp-key-elm">{{ kw.key }}</span>
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endfor %}
                                         </div>
                                     </div>
                                     <div class="exp-desc-box">
@@ -94,5 +106,6 @@
             </div>
         </div>
     {% endfor %}
+
 
 {% endblock %}

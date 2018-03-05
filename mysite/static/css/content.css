@@ -197,10 +197,16 @@
 }
 
 .role-info{
+    margin-left:0.3em;
     margin-bottom:0.5em;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    display: flex;
+    -webkit-flex-direction: column; /* Safari */
+    flex-direction:         column;
 }
 .role-info-p{
-    text-indent: 1em;
+    text-indent: 0.8em;
     margin-bottom: 1.5em;
 }
 .exp-label{

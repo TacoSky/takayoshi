@@ -75,6 +75,7 @@ def education(request):
 
     """get experiences"""
     companies = Company.objects.all().order_by('order')
+    cl = Classification.objects.all()
     for comp in companies:
 
         temproles = []
@@ -83,7 +84,11 @@ def education(request):
             tempexps = Experience.objects.all().filter(role=role).filter(type="Student").order_by('order')
             expctns = []
             for exp in tempexps:
-                expctns.append(CtnExps(exp, exp.keywords()))
+                keywords = []
+                for key in exp.keywords():
+                    if key != "":
+                        keywords.append(CtnKeyword(key, 1, cl.filter(name=key)[0].type))
+                expctns.append(CtnExps(exp, sorted(keywords, key=lambda t: t.cls)))
             if expctns.__len__() != 0:
                 temproles.append(CtnRoles(role, expctns))
         if temproles.__len__() != 0:
@@ -92,7 +97,6 @@ def education(request):
     data = {
         'companies': datacomps,
     }
-
     """education page"""
     return render(request,'education.html',data)
 

@@ -52,9 +52,8 @@
                         </label>
                         <div class="exp-box">
                             <div class="role-info font-detail">
-                                <p class="role-info-p font-detail">{{ jobrole.role.startdate|date:"Y M" }}-{{ jobrole.role.enddate|date:"Y M" }}
-                                    {{ jobrole.role.description }}
-                                </p>
+                                <p class="role-info-p font-detail">{{ jobrole.role.startdate|date:"Y M" }}-{{ jobrole.role.enddate|date:"Y M" }}</p>
+                                <p class="role-info-p font-detail">{{ jobrole.role.description }}</p>
                             </div>
 
                             {% for experience in jobrole.exps %}
@@ -76,13 +75,6 @@
                                             {% endif %}
                                         </div>
 
-{% comment %}                                        <div class="exp-label-bottom">
-                                            {% if experience.exp.achievement != "" %}
-                                                <span class="exp-achiev">
-                                                    {{ experience.exp.achievement }}
-                                                </span>
-                                            {% endif %}
-                                        </div>{% endcomment %}
                                         <div class="exp-label-middle">
                                             {% if experience.exp.achievement != "" %}
                                                 <span class="exp-achiev">

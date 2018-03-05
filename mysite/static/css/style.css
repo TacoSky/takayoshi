@@ -8,14 +8,25 @@
     background-color:#edf0f2;
     background-size:16px 16px;
 }
-.style-tdot-trans{
-    background:
-        radial-gradient(rgba(206, 229, 243, 1) 2%, transparent 10%) 0 0,
+@media all and (orientation: landscape) {
+    .style-tdot-trans {
+        background: radial-gradient(rgba(206, 229, 243, 1) 2%, transparent 10%) 0 0,
         radial-gradient(rgba(206, 229, 243, 1) 2%, transparent 10%) 8px 8px;
-    background-color: rgba(237, 240, 242, 0.65);
-    background-size:16px 16px;
+        background-color: rgba(237, 240, 242, 0.6);
+        background-size: 16px 16px;
+    }
+}
+
+@media all and (orientation: portrait) {
+    .style-tdot-trans {
+        background: radial-gradient(rgba(206, 229, 243, 1) 2%, transparent 10%) 0 0,
+        radial-gradient(rgba(206, 229, 243, 1) 2%, transparent 10%) 8px 8px;
+        background-color: rgba(237, 240, 242, 0.8);
+        background-size: 16px 16px;
+    }
 }
 .style-h1{
+
     color: #ffb16d;
     -webkit-filter:
             drop-shadow(-1px 1px 0px rgba(168,213,255,1))
