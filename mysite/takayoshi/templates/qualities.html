@@ -23,88 +23,45 @@
 
     <p>
         This page is display my qualities categorized to creator / engineer / marketer, and level of each skills.
-    </p>
-    <p>
-        <span class="kwd-exp ">
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-        </span>
-        <span>
-            3 stars means SPECIALIST
-        </span>
-    </p>
-    <p>
-        <span class="kwd-exp ">
-            <i class="material-icons">star_border</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-        </span>
-        <span>
-            2 stars means SENIOR
-        </span>
+        3 stars means specialist, 2 stars means senior, 1 star means beginner.
     </p>
 
-    <p>
-        <span class="kwd-exp ">
-            <i class="material-icons">star_border</i>
-            <i class="material-icons">star_border</i>
+    <div class="kwd-box">
+        <span class="kwd-name">
+                Specialist
+        </span>
+        <span class="kwd-space"></span>
+        <span class="kwd-exp style-Star">
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
             <i class="material-icons">star</i>
         </span>
-        <span>
-            1 star   means BIGINNER
-        </span>
-    </p>
-
-    <div class="area-classification">
-        <h2 class="style-Creator-h">Qualities As Creator</h2>
-        <p class="cls-desc">
-            Always consider why create, and what is the best way to make value to be known.
-            Stick to text, color, form, detail.
-            Get happy when spread information I created.
-        </p>
-
-        <div class="cls-detail">
-
-            <input type="checkbox" id="cls-tgl-Creator"  class="cls-tgl">
-            <label for="cls-tgl-Creator" class="cls-btn-label" ><i class="material-icons style-Creator">close</i></label>
-            <label for="cls-tgl-Creator" class="cls-title-lbl">
-                <div class="cls-label">
-                    <h3 class="style-Creator-h style-h3">
-                        I'm skilled of ...
-                    </h3>
-                </div>
-            </label>
-
-            <div class="cls-box">
-                {% for keyword in keywords %}
-                    {% if keyword.cls == "Creator" %}
-                        <div class="kwd-box">
-                            <span class="kwd-name">
-                                    {{ keyword.key }}
-                            </span>
-                            <span class="kwd-space"></span>
-                            <span class="kwd-exp style-Creator">
-                                {% if keyword.exp <= 1 %}
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star</i>
-                                {% elif keyword.exp <= 4 %}
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star</i>
-                                    <i class="material-icons">star</i>
-                                {% elif keyword.exp > 4 %}
-                                    <i class="material-icons">star</i>
-                                    <i class="material-icons">star</i>
-                                    <i class="material-icons">star</i>
-                                {% endif %}
-                            </span>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
     </div>
+    <div class="kwd-box">
+        <span class="kwd-name">
+                Senior
+        </span>
+        <span class="kwd-space"></span>
+        <span class="kwd-exp style-Star">
+            <i class="material-icons">star_border</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+        </span>
+    </div>
+    <div class="kwd-box">
+        <span class="kwd-name">
+                Beginner
+        </span>
+        <span class="kwd-space"></span>
+        <span class="kwd-exp style-Star">
+            <i class="material-icons">star_border</i>
+            <i class="material-icons">star_border</i>
+            <i class="material-icons">star</i>
+        </span>
+    </div>
+
+
+
 
     <div class="area-classification">
         <h2 class="style-Engineer-h">Qualities As Engineer</h2>
@@ -144,6 +101,57 @@
                                     <i class="material-icons">star</i>
                                     <i class="material-icons">star</i>
                                 {% elif keyword.exp > 3 %}
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% endif %}
+                            </span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="area-classification">
+        <h2 class="style-Creator-h">Qualities As Creator</h2>
+        <p class="cls-desc">
+            Create Web on one-stop, photography for material, design UI, cording, build middle ware and server.
+            Utilize marketing knowledge, create effective Web site.
+            Stick to text, color, form, detail.
+            Get happy when spread information I created.
+        </p>
+
+        <div class="cls-detail">
+
+            <input type="checkbox" id="cls-tgl-Creator"  class="cls-tgl">
+            <label for="cls-tgl-Creator" class="cls-btn-label" ><i class="material-icons style-Creator">close</i></label>
+            <label for="cls-tgl-Creator" class="cls-title-lbl">
+                <div class="cls-label">
+                    <h3 class="style-Creator-h style-h3">
+                        I'm skilled of ...
+                    </h3>
+                </div>
+            </label>
+
+            <div class="cls-box">
+                {% for keyword in keywords %}
+                    {% if keyword.cls == "Creator" %}
+                        <div class="kwd-box">
+                            <span class="kwd-name">
+                                    {{ keyword.key }}
+                            </span>
+                            <span class="kwd-space"></span>
+                            <span class="kwd-exp style-Creator">
+                                {% if keyword.exp <= 1 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp <= 4 %}
+                                    <i class="material-icons">star_border</i>
+                                    <i class="material-icons">star</i>
+                                    <i class="material-icons">star</i>
+                                {% elif keyword.exp > 4 %}
                                     <i class="material-icons">star</i>
                                     <i class="material-icons">star</i>
                                     <i class="material-icons">star</i>

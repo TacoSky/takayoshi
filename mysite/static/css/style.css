@@ -261,3 +261,7 @@
     background: linear-gradient(to right, #ad4c48 0%, #f49c9b 70%, #ad4c48 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223a64', endColorstr='#223a64',GradientType=1 ); /* IE6-9 */
 }
+
+.style-Star,.style-Star>i{
+    color: #f0e75b;
+}
