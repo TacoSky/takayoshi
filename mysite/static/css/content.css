@@ -349,22 +349,17 @@
         height: 35%;
     }
     .ptf-achive{
-        font-size: 0.7em;
-        line-height:0.8em;
-        letter-spacing: 0.05em;
+        font-size: 0.6em;
+        line-height:0.9em;
     }
     .ptf-company{
         font-size: 0.5em;
-        margin:0.1em;
         line-height:0.7em;
-        letter-spacing: 0em;
 
     }
     .ptf-name{
-        font-size: 0.6em;
-        margin:0.1em;
-        line-height:0.9em;
-        letter-spacing: 0.05em;
+        font-size: 1em;
+        line-height:1.2em;
     }
 }
 
@@ -417,53 +412,14 @@
 .emg-box{
     width:80%;
     margin: 5%;
-    padding: 5%;
+    padding: 2%;
     position:relative;
     z-index:4;
 }
-
-@media all and (orientation: landscape) {
-    .emg-box{
-        height: 10%;
-    }
-}
-@media all and (orientation: portrait) {
-    .emg-box{
-        height: 20%;
-    }
-}
-.emg-box-text > p {
-    z-index:7;
-    margin:1%;
-    text-align: center;
+.emg-box > h2 {
+    margin: 0.1em;
 }
 
-.emg-box-metal {
-    content: "";
-    z-index:5;
-    position:absolute;
-    top:1.5%;
-    left:0.5%;
-    width:99%;
-    height:97%;
-    background: #cb5f00;
-    background: -moz-linear-gradient(45deg, #cb5f00 0%, #d3a458 20%, #c6844d 36%, #d3a458 50%, #c6844d 64%, #d3a458 79%, #cb5f00 100%);
-    background: -webkit-linear-gradient(45deg, #cb5f00 0%,#d3a458 20%,#c6844d 36%,#d3a458 50%,#c6844d 64%,#d3a458 79%,#cb5f00 100%);
-    background: linear-gradient(45deg, #cb5f00 0%,#d3a458 20%,#c6844d 36%,#d3a458 50%,#c6844d 64%,#d3a458 79%,#cb5f00 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb5f00', endColorstr='#cb5f00',GradientType=1 );
-}
-.emg-box-text {
-    content: "";
-    position:absolute;
-    z-index:6;
-    top:1.5%;
-    left:0.5%;
-    width:99%;
-    height:97%;
-    display: -webkit-flex; /* Safari */
-    display: flex;
-    -webkit-justify-content: center; /* Safari */
-    justify-content:         center;
-    -webkit-align-content: center; /* Safari */
-    align-content:         center;
+.emg-box > p {
+    margin: 0.1em;
 }
